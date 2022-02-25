@@ -32,8 +32,8 @@ Github 가 기본으로 제공하는 깃허브 페이지와 정적 사이트 생
 
 이 블로그를 방문한 모든이들이 방문한 목적대로 만족할 수 있기를 조금이나마 기대해 본다.
 
-'''python
+```python
 def sayhello():
     print('Hello blog!')
-'''
+```
 {:.python}
