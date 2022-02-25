@@ -4,11 +4,11 @@ title: "Tez'Note"
 desc: "이것저것 끄적이고 나중에 다시 꺼내보는 노트와 같은 공간"
 url: "https://teznote.github.io"
 
-permalink: /post/:title
+# permalink: /post/:title
 
-markdown: kramdown
-kramdown:
-    syntax_highlighter_opts:
-        disable: true
+# markdown: kramdown
+# kramdown:
+#     syntax_highlighter_opts:
+#         disable: true
 
-future: true
+# future: true
