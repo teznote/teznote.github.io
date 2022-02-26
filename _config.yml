@@ -11,6 +11,8 @@ cats:
   title: Web & Blog Develop
 - id: algorithm
   title: Algorithm & Data Structure
+- id: python
+  title: Python
 
 markdown: kramdown
 kramdown:
