@@ -41,18 +41,27 @@ categories: web
 
 터미널에 포커싱을 두고 아래 명령어들을 순서대로 입력한다. 명령어들을 입력할 때마다 뭔가 작업을 한다. 각 명령어들이 무엇을 의미하는지는 이 포스팅이 전달하고자 하는 정보수준을 넘어서니 별도로 찾아보기를 권한다.
 
-- apt update
-- service mysql start
-- mysql -u root -p
+```bash
+apt update
+service mysql start
+mysql -u root -p
+```
+{:.bash}
 
 여기까지 진행하면 패스워드를 입력하라고 하는데 아무 입력없이 그냥 엔터키만 눌러준다. 그러면 프롬프트가 `mysql>`로 바뀐다. 다시 아래 명령어들을 입력해주자. 세미콜론까지 정확하게 입력해야 한다.
 
-- create database wordpress;
-- exit
+```bash
+create database wordpress;
+exit
+```
+{:.bash}
 
 다시 원래의 프롬프트로 돌아오는데, 아래명령어를 입력하여 php 버전을 확인한다.
 
-- php -v
+```bash
+php -v
+```
+{:.bash}
 
 아래와 같이 표시가 된다.
 
@@ -60,12 +69,18 @@ categories: web
 
 7.3.24 버전으로 표시되어 있다. x.x 까지만 아래처럼 입력하자.
 
-- apt install php7.3-mysql
+```bash
+apt install php7.3-mysql
+```
+{:.bash}
 
 중간에 계속 진행하겠느냐는 물음이 나오는데 그냥 엔터를 누르면 된다. 이제 워드프레스를 설치할 차례다. 아래 명령어를 계속 수행한다.
 
-- wget https://ko.wordpress.org/latest-ko_KR.tar.gz
-- tar -zxvf latest-ko_KR.tar.gz &#45;&#45;strip-components=1
+```bash
+wget https://ko.wordpress.org/latest-ko_KR.tar.gz
+tar -zxvf latest-ko_KR.tar.gz &#45;&#45;strip-components=1
+```
+{:.bash}
 
 ## 구름 IDE 환경설정
 
