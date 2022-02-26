@@ -8,7 +8,7 @@ permalink: /post/:title
 
 cats:
 - id: web
-- title: Web & Blog Develop
+  title: Web & Blog Develop
 
 markdown: kramdown
 kramdown:
