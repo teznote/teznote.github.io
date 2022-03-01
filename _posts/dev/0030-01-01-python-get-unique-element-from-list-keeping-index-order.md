@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "리스트에서, Index 순서를 유지하면서, 중복없는 고유한 요소만 남기기"
+title: "Python 리스트에서, Index 순서를 유지하면서, 중복없는 고유한 요소만 남기기"
 updated: 2021-09-07
-categories: python
+categories: dev
 ---
 
 ## 중복 없애고 고유한 요소만 남기기

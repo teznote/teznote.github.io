@@ -2,7 +2,7 @@
 layout: default
 title: "구름 IDE 에 워드프레스 설치하고 사용하기"
 updated: 2022-01-03
-categories: web
+categories: dev
 ---
 
 ## 2022-01-03 Update

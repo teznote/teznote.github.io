@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "Lambda 함수식 안에서 Statement 사용하기"
+title: "Python Lambda 함수식 안에서 Statement 사용하기"
 updated: 2021-09-07
-categories: python
+categories: dev
 ---
 
 ## Expression 만 허용하는 Lambda 함수식

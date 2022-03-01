@@ -1,4 +1,4 @@
-remote_theme: teznote/tezskin@v2.1.0
+remote_theme: teznote/tezskin@v2.2.0
 
 title: "Tez'Note"
 desc: "이것저것 끄적이고 나중에 다시 꺼내보는<br class='mobile'/> 노트와 같은 공간"
@@ -7,12 +7,11 @@ url: "https://teznote.github.io"
 permalink: /post/:title
 
 cats:
-- id: web
-  title: Web & Blog Develop
 - id: algorithm
   title: Algorithm & Data Structure
-- id: python
-  title: Python
+- id: dev
+  title: Development Note
+  order: desc
 
 markdown: kramdown
 kramdown:
