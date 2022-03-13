@@ -93,8 +93,13 @@ apt purge iptables
 ```
 {:.bash}
 
-root 권한으로 진입한 다음, 다 없애버렸다.
-
 다음으로 docker 를 설치하였다. [Docker 도움말(영문)](https://docs.docker.com/engine/install/ubuntu/) 을 참고하여 설치하면 된다.
+
+설치 후에는 아래와 같이 권한을 설정해준다.
+
+```bash
+chmod 777 /var/run/docker.sock
+```
+{:.bash}
 
 VSCode 에서 원격으로 접속한 뒤, 위 그림에서 보인 "원격 탐색기" 화면에서 "SSH Target" 대신 "Containers" 를 선택하면, 컨테이너들을 볼 수 있고, Attach 할 수도 있다.
