@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "오라클 클라우드, 우분투, 도커 설치 및 세팅"
+title: "오라클 클라우드, 우분투, VSCode, 도커 설치 및 세팅"
 update: 2022-03-13
 tags: dev, blog
 ---
@@ -37,7 +37,7 @@ tags: dev, blog
 
 *4. 생성한 VM 접속*
 
-블로그에서 소개한 Putty 프로그램이 아라도 Windows 명령 프롬프트에서 아래와 같이 입력하면 접속 할 수 있다.
+블로그에서 소개한 Putty 프로그램이 아니더라도 Windows 명령 프롬프트에서 아래와 같이 입력하면 접속 할 수 있다.
 
 ```bash
 ssh -i [Private 키 경로,이름] ubuntu@[VM 의 공용 IP]
