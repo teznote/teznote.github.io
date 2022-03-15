@@ -103,3 +103,27 @@ chmod 777 /var/run/docker.sock
 {:.bash}
 
 VSCode 에서 원격으로 접속한 뒤, 위 그림에서 보인 "원격 탐색기" 화면에서 "SSH Target" 대신 "Containers" 를 선택하면, 컨테이너들을 볼 수 있고, Attach 할 수도 있다.
+
+## 참고할 사항
+
+터미널에서 docker 관련 명령어를 썼는데 아래와 같은 에러가 나올 수 있다.
+
+```plaintext
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+```
+{:.bash}
+
+구글링 등을 하면 나오는 일반적인 방법으로는 잘 안되었다. 아래와 같이 해결할 수 있었다.
+
+```bash
+ps -ef | grep dockerd
+```
+{:.bash}
+
+PID 번호를 확인한 뒤,
+
+```bash
+kill -9 [PID번호]
+service docker start
+```
+{:.bash}
