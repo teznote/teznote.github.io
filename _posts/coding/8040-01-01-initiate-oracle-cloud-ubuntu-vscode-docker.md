@@ -17,17 +17,17 @@ tags: [coding,dev]
 
 개인적으로는 위 블로그에서 설명한 과정과 유사하게 구성하되, 몇가지를 다르게 설정했다.
 
-*1. 운영체제*
+### 1. 운영체제
 
 운영체제는 가장 많이 사용하는 Ubuntu 를 사용했다. 현재 시점에서 사용하기 가장 무난한 버전은 20.04 LTS 다.
 
-*2. SSH Key Gen*
+### 2. SSH Key Gen
 
 별도 프로그램을 다운 받기 귀찮아서, Windows 명령 프롬프트에서 Key 를 생성했다. 아래 사이트(영문)을 참고했다.
 
 - [phoenixnap 사이트](https://phoenixnap.com/kb/generate-ssh-key-windows-10)
 
-*3. 오라클 클라우드 포트 개방*
+### 3. 오라클 클라우드 포트 개방
 
 ![그림00]({{ '/img/dev/dev-0000.png' | relative_url }})
 
