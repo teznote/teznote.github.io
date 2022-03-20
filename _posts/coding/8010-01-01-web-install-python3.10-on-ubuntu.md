@@ -2,7 +2,7 @@
 layout: default
 title: "Ubuntu 에 Python 최신 버전 설치하기"
 updated: 2022-01-09
-categories: dev
+tags: [coding,dev]
 ---
 
 ## Ubuntu 와 Python

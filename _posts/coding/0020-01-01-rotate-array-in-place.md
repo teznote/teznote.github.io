@@ -2,7 +2,7 @@
 layout: default
 title: "시간복잡도 O(n), 공간복잡도 O(1) 으로 배열 로테이션"
 updated: 2021-12-24
-categories: algorithm
+tags: [coding,algorithm]
 ---
 
 ## 배열 로테이션

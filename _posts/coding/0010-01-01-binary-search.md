@@ -2,7 +2,7 @@
 layout: default
 title: "이진탐색 (Binary Search)"
 updated: 2021-12-23
-categories: algorithm
+tags: [coding,algorithm]
 ---
 
 ## 이진탐색 (Binary Search)

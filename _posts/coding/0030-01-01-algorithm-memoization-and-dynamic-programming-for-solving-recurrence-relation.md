@@ -2,7 +2,7 @@
 layout: default
 title: "점화식 문제를 해결하는 메모이제이션과 다이나믹 프로그래밍"
 updated: 2021-01-03
-categories: algorithm
+tags: [coding,algorithm]
 ---
 
 ## 점화식
