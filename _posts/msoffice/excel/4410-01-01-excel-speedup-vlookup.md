@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "VLOOKUP: 유사일치 방식으로 VLOOKUP 함수 속도 높이기"
 updated: 2021-05-03
 tags: [msoffice,formula]
