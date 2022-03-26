@@ -17,6 +17,11 @@ navtags:
   - id: dev
     title: Development Note
     order: desc
+- id: msoffice
+  title: MS Office Tips
+  subs:
+  - id: formula
+    title: Useful Excel Formula
 
 markdown: kramdown
 kramdown:
