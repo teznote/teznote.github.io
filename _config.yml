@@ -1,7 +1,7 @@
 remote_theme: teznote/tezskin@v3.0.6
 
 title: "Tez'Note"
-desc: "이것저것 끄적이는 "
+desc: "이것저것 끄적이는 노트같은 공간"
 url: "https://teznote.github.io"
 
 permalink: /post/:title
