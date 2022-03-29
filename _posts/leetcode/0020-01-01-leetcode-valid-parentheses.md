@@ -63,7 +63,6 @@ def isValid(self, s: str) -> bool:
         else:
             stack.append(x)
     
-    print(stack)
     return stack == []
 
 # 수행시간: 32 ms
