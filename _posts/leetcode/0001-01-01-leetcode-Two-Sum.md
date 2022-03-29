@@ -14,21 +14,21 @@ tags: [leetcode,easy,array,hash_table]
 ## Brute Force
 
 ```python
-# 수행시간: 3696 ms
 def twoSum(self, nums: List[int], target: int) -> List[int]:
     for i, x in enumerate(nums):
         for j, y in enumerate(nums[i + 1:], i + 1):
             if x + y == target:
                 return i, j
+
+# 수행시간: 3696 ms
 ```
 {:.python}
 
-Python 의 enumerate 는 참 요긴한 함수다. 이중루프로 구현할 수 있다.
+이중루프로 구현할 수 있다.
 
 ## Hash Table
 
 ```python
-# 수행시간: 69 ms
 def twoSum(self, nums: List[int], target: int) -> List[int]:
     h = {}
     for i, x in enumerate(nums):
@@ -37,6 +37,8 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
             return h[y], i
         else:
             h[x] = i
+
+# 수행시간: 69 ms            
 ```
 {:.python}
 
