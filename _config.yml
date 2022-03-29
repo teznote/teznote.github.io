@@ -10,8 +10,8 @@ navtags:
 - id: leetcode
   title: Leetcode Problems
   subs:
-  - id: array
-    title: Array
+  - id: seq
+    title: Array or String
 - id: msoffice
   title: MS Office Tips
   subs:

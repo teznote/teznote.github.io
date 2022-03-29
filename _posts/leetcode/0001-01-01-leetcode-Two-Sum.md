@@ -2,7 +2,7 @@
 layout: default
 title: "1. Two Sum"
 updated: 2022-03-29
-tags: [leetcode,easy,array,hash_table]
+tags: [leetcode,seq]
 ---
 
 ## 문제
