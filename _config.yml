@@ -7,16 +7,11 @@ url: "https://teznote.github.io"
 permalink: /post/:title
 
 navtags:
-- id: coding
-  title: Programming & Coding
+- id: leetcode
+  title: Leetcode Problems
   subs:
-  - id: algorithm
-    title: Algorithm
-  - id: python
-    title: Python Code Snippet
-  - id: dev
-    title: Development Note
-    order: desc
+  - id: array
+    title: Array
 - id: msoffice
   title: MS Office Tips
   subs:
