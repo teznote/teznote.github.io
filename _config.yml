@@ -12,6 +12,8 @@ navtags:
   subs:
   - id: seq
     title: Array or String
+  - id: graph
+    title: Graph
 - id: msoffice
   title: MS Office Tips
   subs:
