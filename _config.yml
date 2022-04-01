@@ -19,6 +19,15 @@ navtags:
   subs:
   - id: formula
     title: Useful Excel Formula
+- id: dev
+  title: Development
+  subs:
+  - id: web
+    title: Web and Blog
+    order: desc
+  - id: python
+    title: Python Tips
+    order: desc
 
 markdown: kramdown
 kramdown:

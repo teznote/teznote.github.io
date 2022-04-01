@@ -2,7 +2,7 @@
 layout: default
 title: "오라클 클라우드, 우분투, VSCode, 도커 설치 및 세팅"
 updated: 2022-03-13
-tags: [coding,dev]
+tags: [dev,web]
 ---
 
 ## 이 포스팅은...
