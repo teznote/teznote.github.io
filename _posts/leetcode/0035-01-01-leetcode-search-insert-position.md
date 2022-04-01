@@ -26,6 +26,8 @@ def searchInsert(self, nums: List[int], target: int) -> int:
             j = m
     
     return i
+
+# 수행시간: 46 ms
 ```
 {:.python}
 
@@ -91,6 +93,8 @@ def searchInsert(self, nums: List[int], target: int) -> int:
     from bisect import bisect_left
     
     return bisect_left(nums, target)
+
+# 수행시간: 57 ms
 ```
 {:.pseudo}
 
