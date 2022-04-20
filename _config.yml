@@ -14,6 +14,8 @@ navtags:
     title: Array or String
   - id: graph
     title: Graph
+  - id: design
+    title: Algorithm Design
 - id: msoffice
   title: MS Office Tips
   subs:
