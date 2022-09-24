@@ -24,7 +24,7 @@ var twoSum = function(nums, target) {
     }
 };
 
-# 수행시간: 128 ms
+// 수행시간: 128 ms
 ```
 {:.javascript}
 
@@ -47,7 +47,7 @@ var twoSum = function(nums, target) {
     }
 };
 
-# 수행시간: 54 ms            
+// 수행시간: 54 ms            
 ```
 {:.javascript}
 
