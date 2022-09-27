@@ -15,32 +15,36 @@ O(log n) 시간복잡도로 해결하라고 되어 있으므로, [이진탐색](
 
 ## Binary Search
 
-```python
-def searchInsert(self, nums: List[int], target: int) -> int:
-    i, j = 0, len(nums)
-    while i < j:
-        m = i + (j - i) // 2
-        if nums[m] < target:
-            i = m + 1
-        else:
-            j = m
+```js
+var searchInsert = function(nums, target) {
+    var i = 0, j = nums.length;
     
-    return i
+    while (i < j) {
+        var m = i + ~~((j - i) / 2);
+        if (nums[m] < target) {
+            i = m + 1;
+        } else {
+            j = m;
+        }
+    }
+    
+    return i;
+};
 
-# 수행시간: 46 ms
+// 수행시간: 74 ms
 ```
-{:.python}
+{:.javascript}
 
-위 이진탐색 링크를 참고해보면, 이진탐색이 무엇인지는 쉽게 알 수 있다. 다만 이 로직을 프로그래밍으로 구현하다보면 의외로 까다롭다는 것을 알 게 된다. 아래와 같이 작동하도록 로직을 구성하는 것이 좋다.
+위 이진탐색 링크를 참고해보면, 이진탐색이 무엇인지는 쉽게 알 수 있다. 다만 이 로직을 프로그래밍으로 구현하다보면 의외로 까다로운데 아래와 같이 작동하도록 로직을 구성하는 것이 좋다.
 
 i 를 왼쪽 한계위치, j 를 오른쪽 한계위치, m 을 중간 위치라 하자.
 
 ```pseudo
 1. 초기값으로 왼쪽 한계위치는 가장 왼쪽 요소를 (0 번 인덱스), 오른쪽 한계위치는 가장 오른쪽 요소보다 한칸 더 나아간 위치를 (마지막 인덱스 + 1) 가리키도록 한다.
 2. i < j 이라면 아래 로직을 계속 수행한다.
-3. 중간 위치 m 은 m = i + (j - 1) // 2 으로 구한다.
-4. nums[m] 가 target 보다 "작을" 경우 왼쪽 한계위치 i 를 m + 1 위치로 옮긴다.
-5. nums[m] 가 target 보다 "크거나 같을" 경우 오른쪽 한계위치 j 를 m 위치로 옮긴다.
+3. 중간 위치 m 은 m = i + ~~((j - 1) / 2) 으로 구한다. ~ 는 NOT 비트연산자로 ~~ 처럼 적용하면 소수점 이하를 버리는 Math.trunc 함수와 동일한 작동을 한다.
+4. nums[m] 이 target 보다 "작을" 경우 왼쪽 한계위치 i 를 m + 1 위치로 옮긴다.
+5. nums[m] 이 target 보다 "크거나 같을" 경우 오른쪽 한계위치 j 를 m 위치로 옮긴다.
 ```
 {:.pseudo}
 
@@ -85,17 +89,3 @@ i 를 왼쪽 한계위치, j 를 오른쪽 한계위치, m 을 중간 위치라 
  m                             m
 ```
 {:.pseudo}
-
-## Python 의 bisect 모듈 사용
-
-```python
-def searchInsert(self, nums: List[int], target: int) -> int:
-    from bisect import bisect_left
-    
-    return bisect_left(nums, target)
-
-# 수행시간: 57 ms
-```
-{:.pseudo}
-
-Python 은 bisect 모듈에서 이진탐색 함수를 제공한다. bisect_left 함수는 위에서 구현한 함수와 동일하게 작동한다.
