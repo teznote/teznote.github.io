@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "20. Valid Parentheses"
-updated: 2022-09-24
+updated: 2022-03-29
 tags: [leetcode,seq]
 ---
 
