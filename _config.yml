@@ -16,11 +16,6 @@ navtags:
     title: Graph
   - id: design
     title: Algorithm Design
-- id: msoffice
-  title: MS Office Tips
-  subs:
-  - id: formula
-    title: Useful Excel Formula
 - id: dev
   title: Development
   subs:
