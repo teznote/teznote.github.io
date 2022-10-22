@@ -2,7 +2,8 @@
 layout: post
 title: "104. Maximum Depth of Binary Tree"
 updated: 2022-09-29
-tags: [leetcode,graph]
+categories: [leetcode_easy]
+tags: [python,leetcode,easy,tree,depth_first_search,breadth_first_search,binary_tree]
 ---
 
 ## 문제
