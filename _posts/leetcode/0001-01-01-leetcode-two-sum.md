@@ -3,7 +3,7 @@ layout: post
 title: "1. Two Sum"
 updated: 2022-03-29
 categories: [leetcode_easy]
-tags: [python,leetcode,easy,array.hash_table]
+tags: [python,leetcode,easy,array,hash_table]
 ---
 
 ## 문제
