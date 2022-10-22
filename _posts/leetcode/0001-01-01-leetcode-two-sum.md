@@ -1,56 +1,52 @@
 ---
-layout: default
+layout: post
 title: "1. Two Sum"
 updated: 2022-03-29
-tags: [leetcode,seq]
+categories: [leetcode_easy]
+tags: [python,leetcode,easy,array.hash_table]
 ---
 
 ## 문제
 
 [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)
 
-숫자들을 요소로 가진 배열 nums 가 주어지고, nums 의 임의의 두 요소의 합이 target 이 되는 경우가 반드시 유일하게 존재한다고 할 때, 두 요소의 인덱스를 리턴하는 문제다.
+숫자들로 이뤄진 nums 리스트 안에, 두 요소의 합의 target 이 되는 케이스가 반드시 유일하게 존재한다고 할 때, 두 요소의 인덱스를 찾아 리턴하는 문제다.
 
-## Brute Force
+문제에서는 O(N^2) 보다 더 효율적인 방법도 찾아보라고 하고 있다.
 
-```js
-var twoSum = function(nums, target) {
-    for (let i = 0; i < nums.length - 1; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[i] + nums[j] === target) {
-                return [i, j];
-            }
-        }
-    }
-};
+## 무차별 대입법
 
-// 수행시간: 128 ms
+```python
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    for i, x in enumerate(nums[:-1]):
+        for j, y in enumerate(nums[i+1:], i+1):
+            if x+y == target:
+                return [i, j]
 ```
-{:.javascript}
+{:.python}
 
-이중루프로 구현할 수 있다.
+이른바 무차별 대입법 (Brute Force) 라 불리는 방법으로, 이중루프를 구현하여 모든 케이스를 순회하며서, 두 요소의 합이 target 이 되는지 탐색한다.
 
-## Hash Table
+시간복잡도는 O(N^2) 으로, 문제에서는 더 효율적인 방법을 찾아보라 하고 있으므로, 문제가 요구하는 진정한 풀이는 아니다.
 
-```js
-var twoSum = function(nums, target) {
-    let h = new Map();
-    
-    for (let i = 0; i < nums.length; i++) {
-        let j = h.get(target - nums[i]);
-        
-        if (j === undefined) {
-            h.set(nums[i], i);
-        } else {
-            return [j, i];
-        }
-    }
-};
+## 해시테이블 사용
 
-// 수행시간: 54 ms            
+```python
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    h = {}    # {nums[index]: index, ... }
+
+    for i, x in enumerate(nums):
+        y = target-x
+
+        if y in h:
+            return [h[y], i]
+        else:
+            h[x] = i
 ```
-{:.javascript}
+{:.python}
 
-h 맵을 해시 테이블로 삼았다. 해시 테이블의 값 접근은 이론적으로 O(1) 의 시간복잡도를 지니므로, 1 번의 루프만으로 문제를 해결할 수 있다.
+h 딕셔너리를 해시테이블 저장소로 상정했다. h 에는 `{숫자: 그 숫자가 위치한 인덱스}` 형태의 키/밸류를 저장한다.
 
-nums 길이만큼 i 로 순회하면서, target - num[i] 가 h 안에 있는지를 탐색한다. 없다면 h 에 저장을 해두고, 있다면 즉시 리턴하는 구조다.
+nums 를 x 로 순회하면서, x 와 합이 target 이 되는 어떤 숫자 y 가 이미 h 안에 저장되어 있다면, y 와 x 의 인덱스를 리턴하고, h 안에 저장되어 있지 않다면 나중을 위해 h 안에 저장해놓는 방식이다. 문제에서 두 숫자의 합이 target 이 되는 케이스가 반드시 존재한다고 했기에 가능한 방법이다.
+
+해시테이블은 이론적 시간복잡도가 O(1) 이므로, 위 코드의 총 시간복잡도는 O(N) 이 되어, 무차별대입법보다 훨씬 효율적이다.
