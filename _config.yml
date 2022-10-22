@@ -9,6 +9,8 @@ permalink: /post/:title
 cats:
 - id: leetcode_easy
   title: Leetcode Easy
+- id: leetcode_medium
+  title: Leetcode Medium
 
 markdown: kramdown
 kramdown:
