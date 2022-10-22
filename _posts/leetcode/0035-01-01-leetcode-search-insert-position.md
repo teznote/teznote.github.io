@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "35. Search Insert Position"
 updated: 2022-04-01
 categories: [leetcode_easy]
