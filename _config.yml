@@ -1,4 +1,4 @@
-remote_theme: teznote/tezskin@v3.0.6
+remote_theme: teznote/tezskin@v4.0.0
 
 title: "Tez'Note"
 desc: "이것저것 끄적이는 노트같은 공간"
@@ -6,25 +6,9 @@ url: "https://teznote.github.io"
 
 permalink: /post/:title
 
-navtags:
-- id: leetcode
-  title: Leetcode Problems
-  subs:
-  - id: seq
-    title: Array or String
-  - id: graph
-    title: Graph
-  - id: design
-    title: Algorithm Design
-- id: dev
-  title: Development
-  subs:
-  - id: web
-    title: Web and Blog
-    order: desc
-  - id: python
-    title: Python Tips
-    order: desc
+cats:
+- id: leetcode_easy
+  title: Leetcode Easy
 
 markdown: kramdown
 kramdown:
