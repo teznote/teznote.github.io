@@ -31,14 +31,14 @@ def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
 
 위에서 f 함수가 중위 탐색을 하는 재귀함수다. if 구문 아래 다음 노드를 탐색하기 위한 코드와, 현재의 노드 처리 코드 순서를 아래처럼 바꿔주면 다른 탐색이 된다.
 
-```pseudo
+```python
 # 전위 (Preorder) 탐색     # 중위 (Inorder) 탐색      # 후위 (Postorder) 탐색
 if n:                    if n:                    if n:
     a.append(n.val)          f(n.left)                f(n.left)
     f(n.left)                a.append(n.val)          f(n.right)
     f(n.right)               f(n.right)               a.append(n.val)
 ```
-{:.pseudo}
+{:.python}
 
 leetcode 문제풀이들 중 더욱 기발하게 축약한 코드가 있어 옮겨보았다.
 
