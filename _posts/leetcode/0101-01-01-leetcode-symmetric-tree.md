@@ -1,8 +1,9 @@
 ---
-layout: default
+layout: post
 title: "101. Symmetric Tree"
 updated: 2022-09-28
-tags: [leetcode,graph]
+categories: [leetcode_easy]
+tags: [python,leetcode,easy,tree,dpeth_first_search,breadth_first_search,binary_tree]
 ---
 
 ## 문제
@@ -11,61 +12,55 @@ tags: [leetcode,graph]
 
 어떤 이진트리가 주어졌을 때, 좌우대칭이 되어 있는지를 판별하여 리턴하는 문제다.
 
-대칭이라는 구조를 생각해보면 크게 두가지를 만족시켜야 하는데, 첫째로 뻗어나가는 가지의 구조가 대칭적이어야 하며, 둘째로 대칭되는 노드들끼리의 값도 동일해야 한다.
+대칭이라는 구조를 생각해보면 크게 두가지를 성립되어야 하는데, 첫째는 뻗어나가는 가지의 구조가 대칭적이어야 하며, 둘째는 대칭되는 노드들끼리의 값이 동일해야 한다.
 
-트리를 탐색하는 대표적인 방법인 너비 우선 탐색 (Breadth First Search) 또는 깊이 우선 탐색 (Depth First Search) 를 사용하여 해결할 수 있다.
+트리를 탐색하는 대표적인 방법인 [너비우선탐색](https://namu.wiki/w/%EB%84%88%EB%B9%84%20%EC%9A%B0%EC%84%A0%20%ED%83%90%EC%83%89) (Breadth First Search, BFS) 또는 [깊이우선탐색](https://namu.wiki/w/%EA%B9%8A%EC%9D%B4%20%EC%9A%B0%EC%84%A0%20%ED%83%90%EC%83%89) (Depth First Search, DFS) 를 사용하여 해결할 수 있다.
 
-## Breadth First Search
+## 반복문으로 너비우선탐색
 
-```js
-var isSymmetric = function(root) {
-    let que = [[root.left, root.right]];
-    
-    while (que.length) {
-        let [ln, rn] = que.shift();
-        
-        if (ln && rn) {
-            if (ln.val === rn.val) {
-                que.push([ln.left, rn.right]);
-                que.push([ln.right, rn.left]);
-            } else {
-                return false;
-            }
-        } else if (ln || rn) {
-            return false;
-        }
-    }
-    
-    return true;
-};
+```python
+def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+    queue = [(root.left, root.right)]
 
-// 수행시간: 117 ms
+    while queue:
+        ln, rn = queue.pop(0)
+
+        if ln and rn:
+            if ln.val == rn.val:
+                queue.append((ln.left, rn.right))
+                queue.append((ln.right, rn.left))
+            else:
+                return False
+        elif ln or rn:
+            return False
+
+    return True
 ```
-{:.javascript}
+{:.python}
 
-Queue 자료구조를 사용하여 BFS 를 구현할 수 있다. 위에서 언급한 두가지 대칭조건을 if 조건절로 판별하고 있으며, 탐색 중 대칭이 아니라고 판별되는 순간 즉시 false 를 리턴한다.
+큐 (Queue) 자료구조를 사용하여 너비우선탐색을 구현할 수 있다. 큐 자료구조를 나타내는 queue 리스트에 서로 대칭이 되어야 할 노드를 넣고 탐색을 한다.
 
-## Recursive Depth First Search
+위에서 언급한 두가지 대칭조건을 while 반복문 안 if 구문이 판별하고 있으며, 탐색 중 대칭이 아님을 알게 되는 순간 즉시 False 를 리턴한다.
 
-```js
-var isSymmetric = function(root) {
-    var isMirror = function(ln, rn) {
-        if (!ln && !rn) {
-            return true;
-        } else if (ln && rn && ln.val === rn.val) {
-            return true && isMirror(ln.left, rn.right) && isMirror(ln.right, rn.left);
-        } else {
-            return false;
-        }
-    };
-    
-    return isMirror(root.left, root.right);
-};
+## 재귀함수로 깊이우선탐색
 
-// 수행시간: 109 ms
+```python
+def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+    def fn(ln, rn):
+        if not ln and not rn:
+            return True
+        elif ln and rn:
+            if ln.val == rn.val:
+                return True and fn(ln.left, rn.right) and fn(ln.right, rn.left)
+            else:
+                return False
+        else:
+            return False
+
+    return fn(root.left, root.right)
 ```
-{:.javascript}
+{:.python}
 
-DFS 는 순환문 또는 재귀호출로 구현할 수 있다. 순환문 방식은 위 BFS 예시에서 que.shift(); 구문을 que.pop(); 으로 바꿔주기만 하면 구현이되므로, 여기서는 재귀호출 방식의 DFS 를 구현해보았다.
+깊이우선탐색은 반복문 또는 재귀함수로 구현할 수 있다. 반복문 방식은 위 너비우선탐색 풀이에서 `que.pop(0)` 구문을 `quq.pop()` 으로 바꿔주기만 하면 구현이되므로, 여기서는 재귀함수 방식의 깊이우선탐색 코드를 구현했다. (참고로 너비우선탐색은 재귀함수 방식으로 구현이 안되는데, 재귀호출 이라는 것이 스택 자료구조를 이용한 방식이 때문에 그렇다.)
 
-재귀호출 DFS 방식은 중간에 대칭구조가 false 라고 결론이 나더라도 남은 노드를 계속 탐색하기 때문에 비효율 적으로 느껴진다. (하지만 수행시간은 더 빠르게 나왔다. ??)
+너비우선탐색 풀이와는 다르게, 재귀호출에는 모든 케이스에 대해 리턴이 필요하므로, fn 재귀함수 안의 if 구문에 대칭여부와 관련된 모든 조건이 구현되어 있다.
