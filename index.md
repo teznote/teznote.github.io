@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: post
 title: "Tez'Note 는..."
 updated: 2022-02-26
+tags: [teznote,front_page]
 ---
 
 ## 블로그 다시 시작
