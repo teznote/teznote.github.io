@@ -1,66 +1,59 @@
 ---
-layout: default
+layout: post
 title: "20. Valid Parentheses"
 updated: 2022-03-29
-tags: [leetcode,seq]
+categories: [leetcode_easy]
+tags: [python,leetcode,easy,string,stack]
 ---
 
 ## 문제
 
 [https://leetcode.com/problems/valid-parentheses/](https://leetcode.com/problems/valid-parentheses/)
 
-소/중/대 괄호만으로 나열된 s 문자열이 있을 때, 열리고 닫힌 괄호들이 모두 올바르게 쌍을 이뤘는지를 판별하는 문제다.
+소/중/대 괄호만으로 나열된 s 문자열이 있을 때, 열리고 닫힌 괄호들이 모두 올바르게 쌍을 이뤘는지를 판별하여 리턴하는 문제다.
 
-문제에서 든 예시를 보자면, `(){}[]` 은 모든 괄호쌍이 올바른 문자열이며, `(]` 는 올바르지 못한 문자열이다.
+문제에서 든 예시를 보자면, `(){}[]` 은 모든 괄호쌍이 올바른 문자열이지만, `(]` 는 올바르지 못한 문자열이다.
 
-## Remove Valid Pairs
+## 반복문으로 올바른 괄호쌍 제거
 
-```js
-var isValid = function(s) {
-    var p = '';
-    
-    while (s !== p) {
-        p = s;
-        s = s.replace(/\(\)|\{\}|\[\]/g, '');
-    }
-    
-    return s === '';
-};
+```python
+import re
 
-// 수행시간: 116 ms
+def isValid(self, s: str) -> bool:
+    p = ''
+
+    while s != p:
+        p = s
+        s = re.sub(r'\(\)|\{\}|\[\]', '', s)
+
+    return s == ''
 ```
-{:.javascript}
+{:.python}
 
-p 라는 임시변수를 상정하여 s 를 대입시킨 뒤, s 에서 정규식으로 올바른 괄호쌍을 제거한다. 만일 p === s 라면 더 이상 제거할 괄호쌍이 없다는 의미이므로 반복문을 종료한다.
+정규식을 사용하여 s 문자열에서 올바른 괄호쌍을 계속 제거해간다.
 
-마지막에 s 문자열이 비어있다면 모든 괄호가 올바른 쌍을 이뤘다는 뜻이다.
+더 이상 제거할 수 없을 때, 반복문을 탈출하며, 이 때 문자열 s 가 비어있다면, s 는 올바른 괄호쌍으로만 이뤄졌던 문자열이라는 뜻이 된다.
 
-## Stack
+## 스택 사용
 
-```js
-var isValid = function(s) {
-    var st = [];
-    var d = {
-        ')': '(', '}': '{', ']': '[',
-    };
-    
-    for (var x of s) {
-        if (x in d) {
-            if (st.pop() !== d[x]) {
-                return false;
-            }
-        } else {
-            st.push(x);
-        }
-    }
-    
-    return st.length === 0;
-};
+```python
+def isValid(self, s: str) -> bool:
+    stack = []
+    d = {')': '(', '}': '{', ']': '['}
 
-// 수행시간: 87 ms
+    for x in s:
+        if x in d:
+            if not stack or stack.pop() != d[x]:
+                return False
+        else:
+            stack.append(x)
+
+    return stack == []
 ```
-{:.javascript}
+{:.python}
 
-s 문자열을 순회하면서, 열린괄호가 나온다면 st 배열에 저장을 하고, 닫힌괄호라면 st 의 마지막 요소를 꺼내와서 올바른 괄호쌍인지를 비교한다. 만일 올바르지않은 괄호쌍이라면 즉시 false 를 리턴한다.
+스택 (Stack) 자료형을 나타낼 stack 리스트와, 대/중/소 각각 올바른 괄호쌍이 `{닫힌괄호: 열린괄호, ... }` 형태로 입력되어있는 d 딕셔너리를 상정했다.
 
-s 문자열을 보두 순회하였을 때, st 가 비어있다면 모든 괄호가 올바른 쌍을 이뤘다는 뜻이다.
+s 문자열을 x 로 순회하면서, 만일 x 가 열린괄호라면 stack 에 저장을 하고, 닫힌괄호라면 stack 이 비어있거나, stack 에서 가장 마지막 요소를 꺼내서 올바른 괄호쌍이 아니라면, s 문자열은 올바른 괄호쌍이 아니었다는 의미이므로, 즉시 False 를 리턴한다. 올바른 괄호쌍이면 자연스롭게 stack 의 가장 최근 열린괄호가 지워진 채 다음 반복턴으로 넘어간다.
+
+반복문을 마쳤을 때, stack 이 비어있어야 문자열 s 가 모두 올바른 괄호쌍이었다는 뜻이 된다.
