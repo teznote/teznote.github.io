@@ -46,7 +46,7 @@ def hasCycle(self, head: Optional[ListNode]) -> bool:
 
     return False
 ```
-{:. python}
+{:.python}
 
 slow, fast 투 포인터를 생성하여, slow 는 한 단계씩, fast 는 두 단계씩 노드를 탐색하도록 한다. 만일 순환구조라면 어느 순간에는 두 포인터가 반드시 만나게 되는 점을 이용한 코드다. 이는 플로이드의 거북이와 토끼 알고리즘 (Floyd's Tortoise & Hare Algorithm) 이라고도 한다.
 
