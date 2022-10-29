@@ -14,7 +14,7 @@ tags: [python,leetcode,easy,array,hash_table]
 
 문제에서는 O(N^2) 보다 더 효율적인 방법도 찾아보라고 하고 있다.
 
-## 무차별 대입법
+## 무차별 대입법 (Brute Force)
 
 ```python
 def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -25,28 +25,24 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 ```
 {:.python}
 
-이른바 무차별 대입법 (Brute Force) 라 불리는 방법으로, 이중루프를 구현하여 모든 케이스를 순회하며서, 두 요소의 합이 target 이 되는지 탐색한다.
-
-시간복잡도는 O(N^2) 으로, 문제에서는 더 효율적인 방법을 찾아보라 하고 있으므로, 문제가 요구하는 진정한 풀이는 아니다.
+두 요소 쌍이 되는 모든 케이스를 순회하며서, 합이 target 이 되는지 탐색한다. 시간복잡도는 O(N^2) 이다.
 
 ## 해시테이블 사용
 
 ```python
 def twoSum(self, nums: List[int], target: int) -> List[int]:
-    h = {}    # {nums[index]: index, ... }
+    h = {}
 
     for i, x in enumerate(nums):
         y = target-x
-
         if y in h:
             return [h[y], i]
-        else:
-            h[x] = i
+        h[x] = i
 ```
 {:.python}
 
 h 딕셔너리를 해시테이블 저장소로 상정했다. h 에는 `{숫자: 그 숫자가 위치한 인덱스}` 형태의 키/밸류를 저장한다.
 
-nums 를 x 로 순회하면서, x 와 합이 target 이 되는 어떤 숫자 y 가 이미 h 안에 저장되어 있다면, y 와 x 의 인덱스를 리턴하고, h 안에 저장되어 있지 않다면 나중을 위해 h 안에 저장해놓는 방식이다. 문제에서 두 숫자의 합이 target 이 되는 케이스가 반드시 존재한다고 했기에 가능한 방법이다.
+nums 를 x 로 순회하면서, x 와 합이 target 이 되는 어떤 숫자 y 가 이미 h 안에 저장되어 있다면, y 와 x 의 인덱스를 리턴한다. 저장되어 있지 않다면 현재시점의 인덱스와 숫자를 나중을 위해 h 안에 저장한다.
 
-해시테이블은 이론적 시간복잡도가 O(1) 이므로, 위 코드의 총 시간복잡도는 O(N) 이 되어, 무차별대입법보다 훨씬 효율적이다.
+위 코드의 시간복잡도는 O(N) 이다.
