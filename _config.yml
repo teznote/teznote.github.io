@@ -17,6 +17,8 @@ cats:
   title: Leetcode Easy
 - id: leetcode_medium
   title: Leetcode Medium
+- id: dev
+  title: Dev Blog
 
 markdown: kramdown
 kramdown:
