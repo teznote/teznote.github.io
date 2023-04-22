@@ -8,7 +8,7 @@ tags: [msoffice,excel,formula,vlookup,if,na]
 
 ## 속도개선 VLOOKUP 함수식
 
-![그림00]({{ '/img/msoffice/formula-0000.png' | relative_url }})
+![그림00]({{ '/img/msoffice/formula-4410.png' | relative_url }})
 
 ```excel
 = IF( 검색값=VLOOKUP( 검색값, 검색범위, 1, TRUE ), VLOOKUP( 검색값, 검색범위, 열번호, TRUE ), NA())
