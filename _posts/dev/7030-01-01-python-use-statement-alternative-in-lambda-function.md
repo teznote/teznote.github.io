@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Python Lambda 함수식 안에서 Statement 사용하기"
 updated: 2021-09-07
 categories: [dev]
