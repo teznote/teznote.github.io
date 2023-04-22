@@ -1,13 +1,18 @@
 ---
-layout: default
-title: "시간복잡도 O(n), 공간복잡도 O(1) 으로 배열 로테이션"
+layout: post
+title: "189. Rotate Array"
 updated: 2021-12-24
-tags: [coding,algorithm]
+categories: [leetcode_medium]
+tags: [python,leetcode,medium,array,math,two_pointers]
 ---
 
-## 배열 로테이션
+## 문제
 
-어떤 배열을 k 만큼 로테이션한다고 하면, k 만큼 회전하여 아래와 같은 결과를 보이도록 변환되는 것을 뜻한다.
+[https://leetcode.com/problems/rotate-array/](https://leetcode.com/problems/rotate-array/)
+
+배열의 로테이션을 구현하는 문제인데, 가장 효율적인 시간복잡도 O(n), 공간복잡도 O(1) 로 구현해볼 것도 권장하고 있다.
+
+그리고 어떤 배열을 k 만큼 로테이션한다고 하면, k 만큼 회전하여 아래와 같은 결과를 보이도록 변환되는 것을 뜻한다.
 
 ```pseudo
 # k 가 2 라면,
@@ -22,8 +27,6 @@ tags: [coding,algorithm]
 [6, 7, 1, 2, 3, 4, 5]
 ```
 {:.pseudo}
-
-Leetcode 의 [189. Rotate Array](https://leetcode.com/problems/rotate-array/) 는 이 로테이션을 구현하는 문제인데, 가장 효율적인 시간복잡도 O(n), 공간복잡도 O(1) 로 구현할 수 있는 알고리즘이 있어 이를 소개하고자 한다.
 
 ## 일반적인 방법
 

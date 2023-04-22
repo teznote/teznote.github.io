@@ -1,23 +1,20 @@
 ---
-layout: default
-title: "이진탐색 (Binary Search)"
+layout: post
+title: "704. Binary Search"
 updated: 2021-12-23
-tags: [coding,algorithm]
+categories: [leetcode_easy]
+tags: [python,leetcode,easy,array,binary_search]
 ---
 
-## 이진탐색 (Binary Search)
+## 문제
 
-나무위키의 [이진탐색](https://namu.wiki/w/%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89) 링크에 들어가서 그 안에 있는 그림을 보면, 이진탐색이 무엇인지 쉽게 알 수 있다.
+[https://leetcode.com/problems/binary-search/](https://leetcode.com/problems/binary-search/)
 
-사전에서 단어를 찾는 것과 같이 실생활에서도 이런 탐색 방법은 누구나 한번쯤은 사용해봤을 것이다. 이해하기도 어렵지 않은데, 코드로 작성할 때는 디테일한 부분 구현이 은근히 까다롭게 다가온다.
-
-## 이진탐색 코드
-
-Leetcode 의 [704. Binary Search](https://leetcode.com/problems/binary-search/) 는, 오름차순 정렬된 nums 숫자배열과, target 숫자가 주어지면, nums 안에서 target 숫자의 위치 (인덱스) 를 찾는 문제다. 찾으면 그 위치를, 못 찾으면 -1 을 리턴해야 한다.
+오름차순 정렬된 nums 숫자배열과, target 숫자가 주어지면, nums 안에서 target 숫자의 위치 (인덱스) 를 찾는 문제다. 찾으면 그 위치를, 못 찾으면 -1 을 리턴해야 한다.
 
 그리고 시간복잡도가 O(log n) 이 되도록 구현하라고 했는데, 이는 이진탐색을 사용하라는 의미다.
 
-아래는 그 풀이이다.
+# Two Pointers 사용
 
 ```py
 def search(self, nums: List[int], target: int) -> int:
