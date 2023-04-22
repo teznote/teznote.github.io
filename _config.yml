@@ -7,13 +7,13 @@ url: "https://teznote.github.io"
 permalink: /post/:title
 
 cats:
+- id: excel_formula
+  title: Excel Formula
+  order: asc
 - id: leetcode_easy
   title: Leetcode Easy
 - id: leetcode_medium
   title: Leetcode Medium
-- id: excel_formula
-  title: Excel Formula
-  order: asc
 
 markdown: kramdown
 kramdown:
