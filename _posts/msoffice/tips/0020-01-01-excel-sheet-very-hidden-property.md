@@ -14,7 +14,7 @@ tags: [msoffice,excel,very_hidden]
 
 Sheet 를 깊게 숨기려면 VBA Editor 를 사용해야 한다.
 
-![그림01](/img/msoffice/tips/tips-0002.png)
+![그림01](/img/msoffice/tips/tips-0020.png)
 
 "프로젝트" 창에서 아무 Sheet 나 선택한 뒤, "속성" 창에 있는 Visible 속성을 바꾸면 된다. Visible 속성을 보면 옵션들 중 "Very Hidden" 옵션이 있는데 이 옵션이 깊게 숨기는 옵션이다. 나머지 "Visible" 및 "Hidden" 옵션 은 엑셀 본 화면에서 일반적으로 숨기거나 보이거나 하는 것과 동일한 옵션들이다.
 
