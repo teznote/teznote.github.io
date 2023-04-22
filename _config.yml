@@ -1,4 +1,4 @@
-remote_theme: teznote/tezskin@v4.0.2
+remote_theme: teznote/tezskin@v5.0.0
 
 title: "Tez'Note"
 desc: "이것저것 끄적이는 노트같은 공간"
@@ -11,6 +11,8 @@ cats:
   title: Leetcode Easy
 - id: leetcode_medium
   title: Leetcode Medium
+- id: excel_formula
+  title: Excel Formula
 
 markdown: kramdown
 kramdown:
