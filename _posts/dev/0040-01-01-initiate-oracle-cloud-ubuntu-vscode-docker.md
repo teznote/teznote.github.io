@@ -24,17 +24,15 @@ tags: [dev,web]
 
 ### 2. SSH Key Gen
 
-별도 프로그램을 다운 받기 귀찮아서, Windows 명령 프롬프트에서 Key 를 생성했다. 아래 사이트(영문)을 참고했다.
-
-- [phoenixnap 사이트](https://phoenixnap.com/kb/generate-ssh-key-windows-10)
+별도 프로그램을 다운 받기 귀찮아서, Windows 명령 프롬프트에서 Key 를 생성했다. [phoenixnap 사이트](https://phoenixnap.com/kb/generate-ssh-key-windows-10)(영문)를 참고했다.
 
 ### 3. 오라클 클라우드 포트 개방
 
-![그림00]({{ '/img/dev/dev-0000.png' | relative_url }})
+![그림00]({{ '/img/dev/dev-0040-00.png' | relative_url }})
 
 위와 같이 입력후, `수신 규칙 추가` 를 클릭한다. 그리고, 나머지 규칙들을 다 삭제한다. 아래와 같은 결과만 남겼다.
 
-![그림01]({{ '/img/dev/dev-0001.png' | relative_url }})
+![그림01]({{ '/img/dev/dev-0040-01.png' | relative_url }})
 
 *4. 생성한 VM 접속*
 
@@ -71,7 +69,7 @@ Host [원하는이름]
 
 이제 아래 그림에서 보듯, 왼쪽 아래에 보이는 "원격 탐색기" 버튼을 누르고, 왼쪽 위에 보이는 메뉴 창에서 "SSH Targets" 를 선택한다.
 
-![그림02]({{ '/img/dev/dev-0002.png' | relative_url }})
+![그림02]({{ '/img/dev/dev-0040-02.png' | relative_url }})
 
 다시 왼쪽에 config 파일에서 설정한 `[원하는이름]` 이 나오는데, 이 이름 위에 마우스 커서를 두고 오른쪽 버튼을 눌러 실행시킨다.
 
@@ -79,7 +77,7 @@ Host [원하는이름]
 
 이제 원격 접속이 되었다. 최종적으로는 아래와 같다.
 
-![그림03]({{ '/img/dev/dev-0003.png' | relative_url }})
+![그림03]({{ '/img/dev/dev-0040-03.png' | relative_url }})
 
 왼쪽 아래에 보면 녹색 창으로 어디에 원격접속이 되어있는지를 확인할 수 있다.
 
