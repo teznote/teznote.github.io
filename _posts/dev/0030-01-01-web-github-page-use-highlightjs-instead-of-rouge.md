@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "깃허브 페이지 하이라이터, Rouge 대신 Highlight.js 사용하고, 약간의 커스터마이징"
-updated: 2021-09-
+updated: 2021-09-26
 categories: [dev]
 tags: [dev,web]
 ---
