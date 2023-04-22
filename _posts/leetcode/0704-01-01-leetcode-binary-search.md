@@ -14,7 +14,7 @@ tags: [python,leetcode,easy,array,binary_search]
 
 그리고 시간복잡도가 O(log n) 이 되도록 구현하라고 했는데, 이는 이진탐색을 사용하라는 의미다.
 
-# Two Pointers 사용
+## Two Pointers 사용
 
 ```py
 def search(self, nums: List[int], target: int) -> int:
