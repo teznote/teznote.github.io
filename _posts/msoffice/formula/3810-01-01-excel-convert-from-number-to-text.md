@@ -2,7 +2,7 @@
 layout: post
 title: "TEXT: 숫자를 텍스트 형식으로, 또는 반대로 변환하기"
 updated: 2021-08-06
-categories: [msoffice_excel]
+categories: [excel_formula]
 tags: [msoffice,excel,formula,text]
 ---
 
