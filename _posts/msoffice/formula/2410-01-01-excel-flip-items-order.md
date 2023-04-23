@@ -3,7 +3,7 @@ layout: post
 title: "INDEX: 열에 있는 항목들의 순서를 뒤집어서 재나열하는 함수식"
 updated: 2021-08-18
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,index,rows]
 ---
 
 ## 항목 순서 뒤집기

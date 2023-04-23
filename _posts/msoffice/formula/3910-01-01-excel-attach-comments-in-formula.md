@@ -3,7 +3,7 @@ layout: post
 title: "N: 수식 안에 부연설명 또는 주석 달기"
 updated: 2021-08-18
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,n]
 ---
 
 ## 부연설명 또는 주석 달기

@@ -3,7 +3,7 @@ layout: post
 title: "VLOOKUP,CHOOSE: 오른쪽열 기준으로 보다 왼쪽열 내용 VLOOKUP 검색"
 updated: 2021-05-03
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,vlookup,choose]
 ---
 
 ## CHOOSE 함수로 가상범위 생성

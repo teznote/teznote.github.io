@@ -3,7 +3,7 @@ layout: post
 title: "VBA: 특정한 배경색을 지닌 셀 개수 세는 함수"
 updated: 2021-08-13
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,vba]
 ---
 
 ## 특정 배경색을 가진 셀 개수 세는 함수식

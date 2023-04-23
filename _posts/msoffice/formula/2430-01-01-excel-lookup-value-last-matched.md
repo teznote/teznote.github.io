@@ -3,7 +3,7 @@ layout: post
 title: "INDEX,MATCH: 조건에 부합하는 가장 마지막 항목 검색"
 updated: 2021-08-17
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,index,match]
 ---
 
 ## 조건 부합하는 가장 마지막 항목 검색 함수식

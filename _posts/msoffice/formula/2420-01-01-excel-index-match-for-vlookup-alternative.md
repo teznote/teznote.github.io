@@ -3,7 +3,7 @@ layout: post
 title: "INDEX,MATCH: VLOOKUP 검색 단점없이 대신 사용할 수 있는 보완 함수"
 updated: 2021-08-05
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,index,match,exact,true,vlookup]
 ---
 
 ## VLOOKUP 함수의 단점

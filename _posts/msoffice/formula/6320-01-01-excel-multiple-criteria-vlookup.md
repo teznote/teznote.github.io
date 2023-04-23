@@ -3,7 +3,7 @@ layout: post
 title: "VLOOKUP: 두가지 이상 검색기준으로 VLOOKUP 검색 방법"
 updated: 2021-08-04
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,vlookup,choose]
 ---
 
 ## Helper 열을 이용한 방법

@@ -3,7 +3,7 @@ layout: post
 title: "INDEX,MATCH: 목록에서 고유한 항목 개수를 세고, 추출하여 다시 재나열하는 함수식"
 updated: 2021-08-16
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,index,match,countifs,iferror,round,sumproduct]
 ---
 
 ## 고유항목 추출 함수식

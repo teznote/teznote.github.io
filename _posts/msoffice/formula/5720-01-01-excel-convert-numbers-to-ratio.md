@@ -3,7 +3,7 @@ layout: post
 title: "TEXT: 두 숫자를 비율 (Ratio) 로 표현하기"
 updated: 2021-08-17
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,text,gcd,substitute]
 ---
 
 ## 두 숫자를 비율로 표현

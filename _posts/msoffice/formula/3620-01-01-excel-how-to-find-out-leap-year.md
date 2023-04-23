@@ -3,7 +3,7 @@ layout: post
 title: "MOD: 어떤 연도가 윤년인지 알아내는 함수식"
 updated: 2021-08-09
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,mod,date,if,month]
 ---
 
 ## 윤년 판별 공식

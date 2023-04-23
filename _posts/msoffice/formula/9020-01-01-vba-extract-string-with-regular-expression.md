@@ -3,7 +3,7 @@ layout: post
 title: "VBA: 정규표현식으로 텍스트 안에서 특정 문자열 추출하기"
 updated: 2021-08-16
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,vba]
 ---
 
 ## 정규표현식

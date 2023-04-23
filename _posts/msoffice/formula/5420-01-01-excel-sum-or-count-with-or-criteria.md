@@ -3,7 +3,7 @@ layout: post
 title: "SUMPRODUCT: 복수의 조건들을 OR 로 만족시키는 항목들의 개수, 합계 구하는 방법"
 updated: 2021-08-13
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,sumproduct]
 ---
 
 ## 복수의 조건들을 OR 로 만족

@@ -3,7 +3,7 @@ layout: post
 title: "RATE: CAGR (연평균 성장률) 구하는 함수식"
 updated: 2021-08-05
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,rate,geomean]
 ---
 
 ## CAGR (연평균 성장률)

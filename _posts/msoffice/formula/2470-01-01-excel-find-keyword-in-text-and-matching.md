@@ -3,7 +3,7 @@ layout: post
 title: "INDEX,MATCH: 주어진 텍스트 안에서 특정 키워드를 찾아 매칭하기"
 updated: 2021-08-18
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,index,match,find,isnumber]
 ---
 
 ## 키워드 매칭 함수식

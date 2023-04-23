@@ -3,7 +3,7 @@ layout: post
 title: "SUMPRODUCT: 특정범위 안에 포함된 내역과 일치하는 항목들의 개수, 합계 구하기"
 updated: 2021-08-16
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,sumproduct,countifs,sumifs]
 ---
 
 ## 특정 조건범위 내역과 일치여부 조사

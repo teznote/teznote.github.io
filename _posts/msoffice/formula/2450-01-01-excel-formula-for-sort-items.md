@@ -3,7 +3,7 @@ layout: post
 title: "INDEX,MATCH: 원본 목록을 정렬하여 재나열하는 함수식"
 updated: 2021-08-16
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,index,match,countifs,row,small]
 ---
 
 ## 정렬 함수식

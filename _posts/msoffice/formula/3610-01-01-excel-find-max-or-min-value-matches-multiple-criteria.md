@@ -3,7 +3,7 @@ layout: post
 title: "MAX,MIN: 조건들에 부합하는 항목들 중 최대값이나 최소값 구하기"
 updated: 2021-08-16
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,max,min,if]
 ---
 
 ## 조건 부합 최대값, 최소값 구하기

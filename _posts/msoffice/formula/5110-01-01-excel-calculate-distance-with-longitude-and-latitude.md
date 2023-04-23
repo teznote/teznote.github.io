@@ -3,7 +3,7 @@ layout: post
 title: "RADIANS: 두 지점의 위도, 경도로 두 지점 간 거리 계산하기"
 updated: 2021-08-16
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,radians,acos,cos,sin]
 ---
 
 ## Haversine 공식

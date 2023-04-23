@@ -3,7 +3,7 @@ layout: post
 title: "CELL: Sheet 이름을 불러오는 함수식"
 updated: 2021-08-05
 categories: [excel_formula]
-tags: [excel,formula]
+tags: [excel,formula,vba,cell,find,mid]
 ---
 
 ## Sheet 이름 불러오기
