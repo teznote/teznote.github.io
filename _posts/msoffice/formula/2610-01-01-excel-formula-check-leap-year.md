@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MOD: 어떤 연도가 윤년인지 아닌지 판별하는 함수식"
-updated: 2024-04-22
+updated: 2023-04-22
 categories: [excel_formula]
 tags: [msoffice,excel,formula,mod,month,date]
 ---

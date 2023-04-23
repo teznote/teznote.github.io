@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "VLOOKUP: 유사일치 방식으로 VLOOKUP 함수 속도 높이기"
-updated: 2024-04-22
+updated: 2023-04-22
 categories: [excel_formula]
 tags: [msoffice,excel,formula,vlookup,if,na]
 ---
