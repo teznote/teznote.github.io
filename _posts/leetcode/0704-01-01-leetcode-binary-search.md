@@ -12,7 +12,7 @@ tags: [python,leetcode,easy,array,binary_search]
 
 오름차순 정렬된 nums 숫자배열과, target 숫자가 주어지면, nums 안에서 target 숫자의 위치 (인덱스) 를 찾는 문제다. 찾으면 그 위치를, 못 찾으면 -1 을 리턴해야 한다.
 
-그리고 시간복잡도가 O(log n) 이 되도록 구현하라고 했는데, 이는 이진탐색을 사용하라는 의미다.
+그리고 시간복잡도가 O(log n) 이 되도록 구현하라고 했는데, 이는 이진탐색을 사용하라는 의미다. [나무위키](https://namu.wiki/w/%EC%9D%B4%EC%A7%84%20%ED%83%90%EC%83%89)에서 자세한 설명을 얻을 수 있다.
 
 ## Two Pointers 사용
 
