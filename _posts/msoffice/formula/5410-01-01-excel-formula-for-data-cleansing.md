@@ -3,7 +3,7 @@ layout: post
 title: "SUBSTITUTE,TRIM,CLEAN: 데이터 클렌징이 필요할 때 사용하는 함수식"
 updated: 2021-08-06
 categories: [excel_formula]
-tags: [msoffice,excel,formula,substitute,trim,clean]
+tags: [excel,formula]
 ---
 
 ## 데이터 클렌징이 필요한 경우
@@ -24,7 +24,7 @@ tags: [msoffice,excel,formula,substitute,trim,clean]
 
 VLOOKUP 함수는 검색의 유용성을 위해 와일드카드를 허용하기에 아래와 같은 예기치못한 문제가 생길 수 있다.
 
-![그림00](/img/msoffice/formula/formula-3610-00.png)
+![그림00](/img/msoffice/formula/formula-5410-00.png)
 
 VLOOKUP 함수로 `XYZ**` 를 검색한 결과는 "3,000" 이 아닌 "1,000" 이다. `XYZ**` 을 사용했기 때문에 * 기호를 와일드카드로 판단하여 위부터 검색하여, 이에 해당하는 XYZ 의 판매액인 "1,000" 을 결과로 보이고 있는 것이다. (사실 위 예시에서 보인 상품명 5가지는 모두 XYZ** 에 해당되는 상품명들이다.)
 
@@ -36,7 +36,7 @@ VLOOKUP 함수로 `XYZ**` 를 검색한 결과는 "3,000" 이 아닌 "1,000" 이
 
 다음으로 필요한 것이, 불필요한 공백, 숨은문자, 와일드카드를 제거하는 것이다.
 
-![그림01](/img/msoffice/formula/formula-3610-01.png)
+![그림01](/img/msoffice/formula/formula-5410-01.png)
 
 ```excel
 = SUBSTITUTE( SUBSTITUTE( SUBSTITUTE( TRIM( CLEAN( 데이터 )), "*", "#" ), "?", "$" ), "~", "^" )

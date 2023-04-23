@@ -3,21 +3,21 @@ layout: post
 title: "INDEX,MATCH: 주어진 텍스트 안에서 특정 키워드를 찾아 매칭하기"
 updated: 2021-08-18
 categories: [excel_formula]
-tags: [msoffice,excel,formula,index,match,isnumber,find]
+tags: [excel,formula]
 ---
 
 ## 키워드 매칭 함수식
 
 어떤 의미인지는 바로 아래 예시를 통해 알아보자. "주소" 와 "시도" 가 목록으로 주어졌을 때, 어떤 주소가 어떤 시도에 해당되는지를 매칭시키고 있다.
 
-![그림00](/img/msoffice/formula/formula-1850.png)
+![그림00](/img/msoffice/formula/formula-2470.png)
 
 ```excel
 {= INDEX( 키워드목록, MATCH( true, ISNUMBER( FIND( 키워드목록, 텍스트 )), 0 ))}
 ```
 {:.excel}
 
-위 수식 앞뒤의 중괄호는 **배열수식**으로 입력되어있다는 의미다. 중괄호는 수식이 배열수식으로 입력되어 있다는 표식으로, 배열수식을 입력한 셀 위에 포커싱을 두면 중괄호 표식이 나온다.
+위 수식은 중괄호를 제외한 내용을 입력 후, CTRL + SHIFT + ENTER 키를 눌러 **배열수식으로 입력**해야 정상적으로 작동한다. 중괄호는 수식이 배열수식으로 입력되어 있다는 표식으로, 배열수식을 입력한 셀 위에 포커싱을 두면 중괄호 표식이 나온다.
 
 또한 수식을 입력할 땐, 수식을 넣을 셀을 전부 지정하여 배열수식을 입력하는 것이 아니라, 먼저 하나의 셀만 배열수식으로 입력한 뒤, 그 셀을 아래로 복사하여 붙여넣어야 한다.
 
