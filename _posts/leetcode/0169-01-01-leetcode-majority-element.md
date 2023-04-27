@@ -20,7 +20,7 @@ tags: [python,leetcode,easy,array,hash_table,divide_and_conquer,sorting,counting
 def majorityElement(self, nums: List[int]) -> int:
     return sorted(nums)[len(nums)//2]
 ```
-{.python}
+{:.python}
 
 과반을 차지하는 요소가 반드시 존재한다는 것은, 그 요소의 개수가 전체 요소 개수의 절반보다 많다는 것이 되고, 순서대로 정렬을 했을 때 중간값은 반드시 그 요소가 있다는 의미가 된다.
 
@@ -53,7 +53,7 @@ def majorityElement(self, nums: List[int]) -> int:
     
     return m
 ```
-{.python}
+{:.python}
 
 nums 리스트를 앞에서부터 순회하면서, 나타나는 요소의 상대개수를 센다. 즉, 같은 요소가 나올때마다 c 를 증가시키지만 다른 요소가 나오면 c 를 감소시킨다.
 
