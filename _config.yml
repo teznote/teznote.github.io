@@ -1,28 +1,18 @@
-remote_theme: teznote/tezskin@v5.0.2
+remote_theme: teznote/tezdocs@v1.0.0
 
 title: "Tez'Note"
-desc: "이것저것 끄적이는 노트같은 공간"
+main-top-msg: "이것저것 기록하는 노트같은 블로그"
+footer-msg: "Powered by 깃허브 페이지"
 url: "https://teznote.github.io"
-
 permalink: /post/:title
-
-cats:
-- id: excel_formula
-  title: Excel Formula
-  order: asc
-- id: msoffice_tips
-  title: MS Office Tips
-  order: asc
-- id: leetcode_easy
-  title: Leetcode Easy
-- id: leetcode_medium
-  title: Leetcode Medium
-- id: dev
-  title: Dev Blog
-
 markdown: kramdown
 kramdown:
     syntax_highlighter_opts:
         disable: true
-
 future: true
+navtags:
+- id: msoffice
+  title: MS Office Tips
+  subs:
+  - id: formula
+    title: Useful Excel Formula
