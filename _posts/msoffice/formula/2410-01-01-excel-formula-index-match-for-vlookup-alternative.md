@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "INDEX, MATCH: VLOOKUP 대신 사용하는 보완 함수 조합"
+title: "INDEX, MATCH: VLOOKUP 대신 사용하는 보완 조합"
 updated: 2023-05-08
 tags: [msoffice,formula]
 ---
@@ -71,7 +71,7 @@ INDEX 안에 MATCH 가 두번 나오는데, 첫번째 MATCH 는 열방향(세로
 ![그림04](/img/msoffice/formula/formula-2410-04.png)
 
 ```excel
-{= INDEX( 검색대상열, MATCH( TRUE, EXACT( 검색값, 검색기준열 ), 0 ))}
+{= INDEX( 검색대상열, MATCH( true, EXACT( 검색값, 검색기준열 ), 0 ))}
 ```
 {:.excel}
 
