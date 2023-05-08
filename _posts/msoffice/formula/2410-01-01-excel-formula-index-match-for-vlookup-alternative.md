@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "INDEX,MATCH: VLOOKUP 대신 사용하는 보완 함수"
+title: "INDEX, MATCH: VLOOKUP 대신 사용하는 보완 함수 조합"
 updated: 2023-05-08
 tags: [msoffice,formula]
 ---
