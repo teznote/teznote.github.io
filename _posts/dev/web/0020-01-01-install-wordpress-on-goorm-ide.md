@@ -2,7 +2,6 @@
 layout: post
 title: "구름 IDE 에 워드프레스 설치하고 사용하기"
 updated: 2022-01-03
-categories: [dev]
 tags: [dev,web]
 ---
 
@@ -32,13 +31,13 @@ tags: [dev,web]
 
 이제 오른쪽 위에 보이는 `생성(CTRL+M)` 버튼을 클릭한다. 잠시 기다리면 설치 완료가 되고, `컨테이너 실행`을 클릭하면 아래와 같은 화면이 나타난다.
 
-![그림00]({{ '/img/web/web-0000.png' | relative_url }})
+![그림00]({{ '/img/dev/web/web-0020-00.png' | relative_url }})
 
 ## 설정 및 설치
 
 지금까지는 워드프레스 설치를 위한 php 서버가 준비되었을 뿐이다. IDE 내부를 보면 아래처럼 터미널 화면이 보이는데 여기에 이것저것 명령어를 순차적으로 입력해야 한다.
 
-![그림01]({{ '/img/web/web-0001.png' | relative_url }})
+![그림01]({{ '/img/dev/web/web-0020-01.png' | relative_url }})
 
 터미널에 포커싱을 두고 아래 명령어들을 순서대로 입력한다. 명령어들을 입력할 때마다 뭔가 작업을 한다. 각 명령어들이 무엇을 의미하는지는 이 포스팅이 전달하고자 하는 정보수준을 넘어서니 별도로 찾아보기를 권한다.
 
@@ -66,7 +65,7 @@ php -v
 
 아래와 같이 표시가 된다.
 
-![그림02]({{ '/img/web/web-0002.png' | relative_url }})
+![그림02]({{ '/img/dev/web/web-0020-02.png' | relative_url }})
 
 7.3.24 버전으로 표시되어 있다. x.x 까지만 아래처럼 입력하자.
 
@@ -87,7 +86,7 @@ tar -zxvf latest-ko_KR.tar.gz &#45;&#45;strip-components=1
 
 이제 구름 IDE 설정을 일부 해야 한다. IDE 화면 왼쪽 아래에 보면 기어 모양의 아이콘이 있는데, 이를 클릭한다. 아래와 같은 화면이 나온다.
 
-![그림03]({{ '/img/web/web-0003.png' | relative_url }})
+![그림03]({{ '/img/web/web-0020-03.png' | relative_url }})
 
 `터미널` > `프로필` 메뉴를 선택하면, 오른쪽에 이런저런 코딩이 나오는데, 코딩 부분 제일 아래에 위와 같이 `service mysql start` 을 입력하고, `적용 후 닫기` 를 클릭한다.
 
@@ -99,7 +98,7 @@ tar -zxvf latest-ko_KR.tar.gz &#45;&#45;strip-components=1
 
 이제 IDE 화면 위쪽에 보이는 `프로젝트` 메뉴의 `실행` 을 클릭하든가 아니면 `SHIFT+F5` 키를 눌러주자. 아래와 같은 화면이 나온다.
 
-![그림04]({{ '/img/web/web-0004.png' | relative_url }})
+![그림04]({{ '/img/dev/web/web-0020-04.png' | relative_url }})
 
 위 화면 오른쪽 아래에 뭔가 인터넷 주소같은 것이 보인다. 이 주소가 바로 클라우드에 설치된 워드프레스 주소가 된다.
 
@@ -107,13 +106,13 @@ tar -zxvf latest-ko_KR.tar.gz &#45;&#45;strip-components=1
 
 그러다가 아래와 같은 화면을 만나면 아래에 표시된 대로 입력을 해주자.
 
-![그림05]({{ '/img/web/web-0005.png' | relative_url }})
+![그림05]({{ '/img/dev/web/web-0020-05.png' | relative_url }})
 
 이후의 워드프레스 설정도 알아서 진행하면 된다.
 
 워드프레스 초기 대시보드까지 나타났다면, 이제 다시 구름 IDE 창으로 돌아가보자. 아래 그림과 같이, 파일 목록에 `wp-config.php` 파일이 생성이 돼있을 것이다.
 
-![그림06]({{ '/img/web/web-0006.png' | relative_url }})
+![그림06]({{ '/img/dev/web/web-0020-06.png' | relative_url }})
 
 이 파일을 더블클릭해서 열어보자. 제일 아래에 아래와 같은 코드를 삽입하고 `ctrl-s` 눌러 저장을 해준다.
 
@@ -124,7 +123,7 @@ define('FS_METHOD', 'direct');
 
 이 코드를 삽입하지 않으면, 워드프레스에서 플러그인을 설치하거나 업데이트를 할 때 아래와 같은 메시지가 나오며 작동을 하지 않는다.
 
-![그림07]({{ '/img/web/web-0007.png' | relative_url }})
+![그림07]({{ '/img/web/dev/web-0020-07.png' | relative_url }})
 
 ## 세팅 끝
 
