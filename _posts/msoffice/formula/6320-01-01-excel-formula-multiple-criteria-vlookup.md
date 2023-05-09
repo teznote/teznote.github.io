@@ -2,9 +2,17 @@
 layout: post
 title: "VLOOKUP: 두가지 이상 검색기준으로 VLOOKUP 검색 방법"
 updated: 2021-08-04
-categories: [excel_formula]
-tags: [excel,formula,vlookup,choose]
+tags: [msoffice,formula]
 ---
+
+VLOOKUP 의 함수식은 아래와 같다.
+
+```excel
+= VLOOKUP( 검색값, 검색범위, 열번호, false )
+```
+{:.excel}
+
+보통은 `검색값`을 하나 지정할 수 있지만, 둘 이상의 `검색값`을 And 로 만족하는 VLOOKUP 검색을 할 수 있는 방법이 있다.
 
 ## Helper 열을 이용한 방법
 
@@ -15,7 +23,7 @@ tags: [excel,formula,vlookup,choose]
 ```
 {:.excel}
 
-별도의 Helper 열 (위 그림에서는 B 열) 을 만들어서, Helper 열까지 포함한 `검색범위`를 지정한 뒤, VLOOKUP 검색을 하고 있다. Helper 열이 원하는 조건들을 & 연산자로 묶어둔 만큼, VLOOKUP 함수의 첫번재 인수도 검색값들을 & 연산자로 묶어 검색을 한다.
+별도의 Helper 열 (위 그림에서는 B 열) 을 만들어서, Helper 열까지 포함한 `검색범위`를 지정한 뒤, VLOOKUP 검색을 하고 있다. Helper 열이 원하는 조건들을 & 연산자로 묶어둔 만큼, VLOOKUP 의 첫번재 인수도 검색값들을 & 연산자로 묶어 검색을 한다.
 
 & 연산자와 동일한 기능을 하는 CONCATENATE 함수를 사용해도 되며, 응용하면 세가지 이상 조건으로도 검색이 가능하다.
 
@@ -36,4 +44,4 @@ Helper 열 방식과 마찬가지로, & 연산자 대신 CONCATENATE 함수를 �
 
 ## INDEX, MATCH 함수를 이용한 방법
 
-VLOOKUP 대신 사용할 수 있는 INDEX, MATCH 로도 두가지 이상 조건 검색을 할 수 있다. 이에 대해서는 [별도 포스팅](/post/excel-index-match-for-vlookup-alternative)을 참고하기 바란다. (개인적으로는 이 경우 INDEX, MATCH 사용을 추천한다.)
+VLOOKUP 대신 사용할 수 있는 INDEX, MATCH 로도 두가지 이상 조건 검색을 할 수 있다. 이에 대해서는 [별도 포스팅](/post/excel-formula-index-match-for-vlookup-alternative)을 참고하기 바란다.
