@@ -16,3 +16,10 @@ navtags:
   subs:
   - id: formula
     title: Useful Excel Formula
+- id: dev
+  title: Develop Blog
+  subs:
+    - id: python
+      title: Python Tips
+    - id: web
+      title: Web Develop
