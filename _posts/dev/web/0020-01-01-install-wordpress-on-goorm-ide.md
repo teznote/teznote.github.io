@@ -78,7 +78,7 @@ apt install php7.3-mysql
 
 ```bash
 wget https://ko.wordpress.org/latest-ko_KR.tar.gz
-tar -zxvf latest-ko_KR.tar.gz &#45;&#45;strip-components=1
+tar -zxvf latest-ko_KR.tar.gz --strip-components=1
 ```
 {:.bash}
 
@@ -86,7 +86,7 @@ tar -zxvf latest-ko_KR.tar.gz &#45;&#45;strip-components=1
 
 이제 구름 IDE 설정을 일부 해야 한다. IDE 화면 왼쪽 아래에 보면 기어 모양의 아이콘이 있는데, 이를 클릭한다. 아래와 같은 화면이 나온다.
 
-![그림03]({{ '/img/web/web-0020-03.png' | relative_url }})
+![그림03]({{ '/img/dev/web/web-0020-03.png' | relative_url }})
 
 `터미널` > `프로필` 메뉴를 선택하면, 오른쪽에 이런저런 코딩이 나오는데, 코딩 부분 제일 아래에 위와 같이 `service mysql start` 을 입력하고, `적용 후 닫기` 를 클릭한다.
 
@@ -123,7 +123,7 @@ define('FS_METHOD', 'direct');
 
 이 코드를 삽입하지 않으면, 워드프레스에서 플러그인을 설치하거나 업데이트를 할 때 아래와 같은 메시지가 나오며 작동을 하지 않는다.
 
-![그림07]({{ '/img/web/dev/web-0020-07.png' | relative_url }})
+![그림07]({{ '/img/dev/web/web-0020-07.png' | relative_url }})
 
 ## 세팅 끝
 
