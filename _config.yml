@@ -19,6 +19,8 @@ navtags:
 - id: dev
   title: Develop Blog
   subs:
+    - id: algorithm
+      title: Data Structure & Algorithm
     - id: python
       title: Python Tips
     - id: web
