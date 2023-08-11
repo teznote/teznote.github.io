@@ -53,7 +53,7 @@ MATCH 함수 두번째 인수를 보면 `(조건식)*(조건식)` 형태로 되�
 
 사실 VLOOKUP 으로도 두가지 이상 조검 검색이 가능하다. [별도 포스팅](/post/excel-formula-multiple-criteria-vlookup)을 참고하자.
 
-### 3.면으로 검색 (VLOOKUP 과 HLOOKUP 의 혼합)
+### 3. 면으로 검색 (VLOOKUP 과 HLOOKUP 의 혼합)
 
 ![그림03](/img/excel_formula/formula-2410-03.png)
 
