@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tez'Note 는..."
-updated: 2023-04-22
+updated: 2023-08-11
 tags: [teznote,front_page]
 ---
 
