@@ -16,7 +16,7 @@ VLOOKUP 의 함수식은 아래와 같다.
 
 ## Helper 열을 이용한 방법
 
-![그림00](/img/excel_formula/formula-6320-00.png)
+![그림00](/img/excel_formula/formula-0040-00.png)
 
 ```excel
 = VLOOKUP( 검색값1&검색값2, 검색범위, 열번호, false )
@@ -29,7 +29,7 @@ VLOOKUP 의 함수식은 아래와 같다.
 
 ## 배열수식을 이용한 방법
 
-![그림01](/img/excel_formula/formula-6320-01.png)
+![그림01](/img/excel_formula/formula-0040-01.png)
 
 ```excel
 {= VLOOKUP( 검색값1&검색값2, CHOOSE( {1, 2}, 검색기준열1&검색기준열2, 검색대상열 ), 2, false )}

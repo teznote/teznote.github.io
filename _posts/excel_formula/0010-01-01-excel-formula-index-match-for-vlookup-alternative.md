@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "INDEX, MATCH: VLOOKUP 대신 사용할 수 있는 함수조합"
+title: "INDEX, MATCH: VLOOKUP 보다 유용하게 사용할 수 있는 함수식"
 updated: 2023-05-08
 tags: [excel_formula]
 ---
@@ -18,7 +18,7 @@ VLOOKUP 은 엑셀에선 자주 사용되는 요긴한 함수지만 아래와 �
 
 ## INDEX, MATCH 기본 사용
 
-![그림00](/img/excel_formula/formula-2410-00.png)
+![그림00](/img/excel_formula/formula-0010-00.png)
 
 ```excel
 = VLOOKUP( 검색값, 검색범위, 열번호, false)
@@ -34,13 +34,13 @@ VLOOKUP 은 `검색범위`를 넓게 지정하여, 가장 왼쪽열을 `검색�
 
 ### 1. 오른쪽열 기준으로 보다 왼쪽열 검색
 
-![그림01](/img/excel_formula/formula-2410-01.png)
+![그림01](/img/excel_formula/formula-0010-01.png)
 
 사실 오른쪽 기준으로 보다 왼쪽을 검색하는 것은 다른 함수의 도움을 받아 VLOOKUP 로도 구현할 수는 있다. [별도 포스팅](/post/excel-formula-vlookup-from-right-to-left)을 참고하자.
 
 ### 2. 두가지 이상 조건으로 검색
 
-![그림02](/img/excel_formula/formula-2410-02.png)
+![그림02](/img/excel_formula/formula-0010-02.png)
 
 ```excel
 {= INDEX( 검색대상열, MATCH( 1, (검색기준열1=검색값1)*(검색기준열2=검색값2), 0 ))}
@@ -55,7 +55,7 @@ MATCH 함수 두번째 인수를 보면 `(조건식)*(조건식)` 형태로 되�
 
 ### 3. 면으로 검색 (VLOOKUP 과 HLOOKUP 의 혼합)
 
-![그림03](/img/excel_formula/formula-2410-03.png)
+![그림03](/img/excel_formula/formula-0010-03.png)
 
 ```excel
 = INDEX( 검색대상범위, MATCH( 검색값, 검색기준열, 0 ), MATCH( 검색값, 검색기준행, 0 ))
@@ -66,7 +66,7 @@ INDEX 안에 MATCH 가 두번 나오는데, 첫번째 MATCH 는 열방향(세로
 
 ### 4. 대/소문자 구별 검색
 
-![그림04](/img/excel_formula/formula-2410-04.png)
+![그림04](/img/excel_formula/formula-0010-04.png)
 
 ```excel
 {= INDEX( 검색대상열, MATCH( true, EXACT( 검색값, 검색기준열 ), 0 ))}

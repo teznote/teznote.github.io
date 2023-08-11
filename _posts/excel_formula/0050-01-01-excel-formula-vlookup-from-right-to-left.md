@@ -18,7 +18,7 @@ VLOOKUP 함수는 `검색범위`를 넓게 지정해주면, 가장 왼쪽 열이
 
 ## CHOOSE 함수로 가상범위 생성
 
-![그림00](/img/excel_formula/formula-6330-00.png)
+![그림00](/img/excel_formula/formula-0050-00.png)
 
 ```excel
 = VLOOKUP( 검색값, CHOOSE( {1, 2}, 검색기준열, 검색대상열 ), 2, false )
