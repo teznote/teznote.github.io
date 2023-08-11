@@ -2,14 +2,16 @@
 layout: post
 title: "CELL: Sheet 이름을 불러오는 함수식"
 updated: 2021-08-05
-tags: [msoffice,formula]
+tags: [excel_formula]
 ---
 
-## Sheet 이름 불러오기
+엑셀 작업을 하다보면 가끔은 Sheet 이름을 동적으로 연결해야 할 때가 있다. 예를들면, 부서별로 Sheet 를 만들어서 해당 Sheet 안에 "OO부서" 와 같은 내용이 들어가는 경우처럼 말이다.
 
-엑셀 Sheet 이름을 함수로 불러들일 수 있는 방법이 있다.
+엑셀 Sheet 이름을 알아낼 수 있는 함수식을 사용하면 가능하다. 
 
-![그림00](/img/msoffice/formula/formula-0610.png)
+## CELL 함수로 Sheet 이름 알아내기
+
+![그림00](/img/excel_formula/formula-0060-00.png)
 
 ```excel
 = MID( CELL( "filename", 셀 ), FIND( "]", CELL( "filename", 셀 )) + 1, 256 )
