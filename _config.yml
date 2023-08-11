@@ -1,4 +1,4 @@
-remote_theme: teznote/tezdocs@v1.0.1
+remote_theme: teznote/tezskin@v6.0.0
 
 title: "Tez'Note"
 main-top-msg: "이것저것 기록하는 노트같은 블로그"
@@ -10,18 +10,8 @@ kramdown:
     syntax_highlighter_opts:
         disable: true
 future: true
-navtags:
-- id: msoffice
-  title: MS Office Tips
-  subs:
-  - id: formula
-    title: Useful Excel Formula
-- id: dev
-  title: Develop Blog
-  subs:
-    - id: algorithm
-      title: Data Structure & Algorithm
-    - id: python
-      title: Python Tips
-    - id: web
-      title: Web Develop
+
+cats:
+- id: excel_formula
+  title: Useful Excel Formulas
+  order: asc
