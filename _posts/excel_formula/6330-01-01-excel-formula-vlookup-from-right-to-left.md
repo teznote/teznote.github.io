@@ -18,7 +18,7 @@ VLOOKUP 함수는 `검색범위`를 넓게 지정해주면, 가장 왼쪽 열이
 
 ## CHOOSE 함수로 가상범위 생성
 
-![그림00](/img/excel_formula/formula-0000.png)
+![그림00](/img/excel_formula/formula-6330-00.png)
 
 ```excel
 = VLOOKUP( 검색값, CHOOSE( {1, 2}, 검색기준열, 검색대상열 ), 2, false )
@@ -29,4 +29,4 @@ CHOOSE 는 본래 첫번째 인수에 번호 n 을 지정하면, 뒤 이어진 �
 
 ## INDEX, MATCH 함수조합 사용
 
-INDEX, MATCH 함수조합을 사용하면 보다 손쉽게 왼쪽열 검색을 할 수 있다. 이에 대해서는 [별도 포스팅TBD](#)을 참고하기 바란다.
+INDEX, MATCH 함수조합을 사용하면 보다 손쉽게 왼쪽열 검색을 할 수 있다. 이에 대해서는 [별도 포스팅](/post/excel-formula-index-match-for-vlookup-alternative)을 참고하기 바란다.

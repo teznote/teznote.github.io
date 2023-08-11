@@ -1,26 +1,24 @@
 ---
 layout: post
-title: "INDEX, MATCH: VLOOKUP 대신 사용하는 보완 조합"
+title: "INDEX, MATCH: VLOOKUP 대신 사용할 수 있는 함수조합"
 updated: 2023-05-08
-tags: [msoffice,formula]
+tags: [excel_formula]
 ---
-
-## VLOOKUP 의 단점
 
 VLOOKUP 은 엑셀에선 자주 사용되는 요긴한 함수지만 아래와 같은 불편한 점들이 있다.
 
 - 검색기준열은 검색범위의 가장 왼쪽열로 항상 고정
 - 두가지 이상 검색조건으로 검색 어려움
-- 검색은 항상 세로열 방향으로만 가능하여 면으로 검색 (마치 VLOOKUP 과 HLOOKUP 을 혼합해놓은 검색)은 불가능
+- 검색은 항상 세로열 방향으로만 가능하여 면으로 검색 (마치 VLOOKUP 과 HLOOKUP 을 혼합해놓은 검색) 불가능
 - 넓은 검색범위로 인해 검색범위 안에 열삽입/삭제 하게되면 VLOOKUP 의 결과가 틀어질 가능성 높음
 - 영문 대/소문자 구별 검색 불가능
 {:.note}
 
-하지만 VLOOKUP 대신 INDEX, MATCH 를 사용하면 VLOOKUP 과 같은 결과를 보이면서도, 위 불편함을 최소화하면서 보다 유연하게 사용할 수 있다.
+하지만 VLOOKUP 대신 INDEX, MATCH 를 사용하면 VLOOKUP 과 동일한 결과를 보이면서도, 위 불편함을 최소화하면서 보다 유연하게 사용할 수 있다.
 
 ## INDEX, MATCH 기본 사용
 
-![그림00](/img/msoffice/formula/formula-2410-00.png)
+![그림00](/img/excel_formula/formula-2410-00.png)
 
 ```excel
 = VLOOKUP( 검색값, 검색범위, 열번호, false)
@@ -36,13 +34,13 @@ VLOOKUP 은 `검색범위`를 넓게 지정하여, 가장 왼쪽열을 `검색�
 
 ### 1. 오른쪽열 기준으로 보다 왼쪽열 검색
 
-![그림01](/img/msoffice/formula/formula-2410-01.png)
+![그림01](/img/excel_formula/formula-2410-01.png)
 
 사실 오른쪽 기준으로 보다 왼쪽을 검색하는 것은 다른 함수의 도움을 받아 VLOOKUP 로도 구현할 수는 있다. [별도 포스팅](/post/excel-formula-vlookup-from-right-to-left)을 참고하자.
 
 ### 2. 두가지 이상 조건으로 검색
 
-![그림02](/img/msoffice/formula/formula-2410-02.png)
+![그림02](/img/excel_formula/formula-2410-02.png)
 
 ```excel
 {= INDEX( 검색대상열, MATCH( 1, (검색기준열1=검색값1)*(검색기준열2=검색값2), 0 ))}
@@ -51,13 +49,13 @@ VLOOKUP 은 `검색범위`를 넓게 지정하여, 가장 왼쪽열을 `검색�
 
 수식 앞뒤로 붙어있는 중괄호 {} 를 제외한 수식을 타이핑하고 Ctrl + Shift + Enter 키를 눌러 **배열수식으로 입력**을 해야 정상작동 한다. 수식 입력셀에 포커싱을 두면, 입력한 수식 앞뒤로 중괄호가 보이는데, 배열수식으로 입력했음을 나타내는 표시다.
 
-MATCH 의 두번째 인수를 보면 `(조건식)*(조건식)` 형태로 되어 있는데, 각 조건식의 결과는 true 혹은 false 다. 엑셀은 이 값에 사칙연산을 가하면 true 는 1 로, false 는 0 으로 치환하여 계산을 한다. 모든 조건식이 true 가 되어야만 곱셈의 결과가 1 이 되므로, 모든 조건을 만족하는 경우를 찾도록 구성되어 있는 셈이다.
+MATCH 함수 두번째 인수를 보면 `(조건식)*(조건식)` 형태로 되어 있는데, 각 조건식의 결과는 true 혹은 false 다. 엑셀은 이 값에 사칙연산을 가하면 true 는 1 로, false 는 0 으로 치환하여 계산을 한다. 모든 조건식이 true 가 되어야만 곱셈의 결과가 1 이 되므로, 모든 조건을 만족하는 경우를 찾도록 구성되어 있는 셈이다.
 
 사실 VLOOKUP 으로도 두가지 이상 조검 검색이 가능하다. [별도 포스팅](/post/excel-formula-multiple-criteria-vlookup)을 참고하자.
 
 ### 3.면으로 검색 (VLOOKUP 과 HLOOKUP 의 혼합)
 
-![그림03](/img/msoffice/formula/formula-2410-03.png)
+![그림03](/img/excel_formula/formula-2410-03.png)
 
 ```excel
 = INDEX( 검색대상범위, MATCH( 검색값, 검색기준열, 0 ), MATCH( 검색값, 검색기준행, 0 ))
@@ -68,7 +66,7 @@ INDEX 안에 MATCH 가 두번 나오는데, 첫번째 MATCH 는 열방향(세로
 
 ### 4. 대/소문자 구별 검색
 
-![그림04](/img/msoffice/formula/formula-2410-04.png)
+![그림04](/img/excel_formula/formula-2410-04.png)
 
 ```excel
 {= INDEX( 검색대상열, MATCH( true, EXACT( 검색값, 검색기준열 ), 0 ))}
@@ -77,4 +75,4 @@ INDEX 안에 MATCH 가 두번 나오는데, 첫번째 MATCH 는 열방향(세로
 
 수식 앞뒤로 붙어있는 중괄호 {} 를 제외한 수식을 타이핑하고 Ctrl + Shift + Enter 키를 눌러 **배열수식으로 입력**을 해야 정상작동 한다. 수식 입력셀에 포커싱을 두면, 입력한 수식 앞뒤로 중괄호가 보이는데, 배열수식으로 입력했음을 나타내는 표시다.
 
-대/소문자 구별의 핵심은 EXACT 인데, 이 함수를 입력할 때 보면 도움말 팝업에 "대/소문자를 구분합니다." 라고 나온다. EXACT 의 한쪽 인수를 셀 하나로 두고, 다른쪽 인수를 범위로 두어 배열수식으로 입력하면, 일일이 대소문자 하나하나를 비교하여 완전일치 여부를 다시 배열로 반환한다. 이를 INDEX, MATCH 가 받아서 처리하는 구조이다.
+대/소문자 구별의 핵심은 EXACT 함수인데, 이 함수를 입력할 때 보면 도움말 팝업에 "대/소문자를 구분합니다." 라고 나온다. EXACT 의 한쪽 인수를 셀 하나로 두고, 다른쪽 인수를 범위로 두어 배열수식으로 입력하면, 일일이 대소문자 하나하나를 비교하여 완전일치 여부를 다시 배열로 반환한다. 이를 INDEX, MATCH 가 받아서 처리하는 구조이다.
