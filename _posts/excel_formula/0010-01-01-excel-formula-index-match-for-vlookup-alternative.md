@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "INDEX, MATCH: VLOOKUP 보다 유용하게 사용할 수 있는 함수식"
+title: "INDEX,MATCH: VLOOKUP 보다 유용하게 사용할 수 있는 함수식"
 updated: 2023-05-08
 tags: [excel_formula]
 ---

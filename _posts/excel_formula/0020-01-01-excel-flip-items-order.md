@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "INDEX, ROWS: 열에 있는 데이터들을 역순으로 재나열하는 함수식"
+title: "INDEX,ROWS: 열에 있는 데이터들을 역순으로 재나열하는 함수식"
 updated: 2021-08-18
 tags: [excel_formula]
 ---
