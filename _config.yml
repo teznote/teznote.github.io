@@ -1,4 +1,4 @@
-remote_theme: teznote/tezskin@v6.0.3
+remote_theme: teznote/tezskin@v6.1.0
 
 title: "Tez'Note"
 main-top-msg: "이것저것 기록하는 노트같은 블로그"
@@ -14,4 +14,4 @@ future: true
 cats:
 - id: excel_formula
   title: Useful Excel Formulas
-  order: asc
+  order: title
