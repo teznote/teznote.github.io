@@ -11,7 +11,7 @@ tags: [excel_formula]
 
 ## INDEX, ROWS 함수식 사용
 
-![그림00](/img/msoffice/formula/formula-0020-00.png)
+![그림00](/img/excel_formula/formula-0020-00.png)
 
 ```excel
 = INDEX( 목록범위, ROWS( 변형된목록범위 ))
