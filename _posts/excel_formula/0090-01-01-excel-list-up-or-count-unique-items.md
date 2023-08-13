@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "INDEX,MATCH: 목록에서 고유한 항목 개수를 세고, 추출하여 재나열하는 함수식"
+title: "INDEX,MATCH,SUMPRODUCT: 목록에서 고유한 항목 개수를 세고, 추출하여 재나열하는 함수식"
 updated: 2021-08-16
 tags: [excel_formula]
 ---
@@ -11,7 +11,7 @@ tags: [excel_formula]
 
 만일 함수식으로 표현할 수 있다면, 데이터가 추가될 때마다 고유 데이터 표시가 자동으로 업데이트 될 것이다. 
 
-## INDEX, MATCH 사용하여 고유항목 추출
+## INDEX, MATCH, SUMPRODUCT 함수 사용
 
 아래는 데이터 목록에서 고유 데이터의 개수를 세고, 고유한 데이터만을 재나열해주는 함수식이다.
 
@@ -43,7 +43,7 @@ tags: [excel_formula]
 
 위 예시를 가지고 구체적으로 살펴보면, "배"라는 항목의 COUNTIFS 결과는 3 이 되는데 분수 형태를 띄고 있으므로 1/3 이 구해진다. 모든 "배" 에 대해서 1/3 이라는 결과가 SUMPRODUCT 함수로 더해지므로 1/3 + 1/3 + 1/3 이 되어 최종적으로는 1 이 된다. 결과적으로 중복 데이터가 몇개가 있든 각각의 데이터마다 1 이 되므로 그 합계는 고유 데이터 개수가 되는 원리다.
 
-제일 바깥에 있는 ROUND 함수는 혹시라도 있을지 모르는 분수식 계산의 오류 방지 차원에서 넣은 것이다. (이 오류에 대해서는 [MS 도움말](https://docs.microsoft.com/ko-KR/office/troubleshoot/excel/floating-point-arithmetic-inaccurate-result)을 참고하자.)
+제일 바깥에 있는 ROUND 함수는 혹시라도 있을지 모르는 **분수식 계산의 오류** 방지 차원에서 넣은 것이다. (이 오류에 대해서는 [MS 도움말](https://docs.microsoft.com/ko-KR/office/troubleshoot/excel/floating-point-arithmetic-inaccurate-result)을 참고하자.)
 
 다음으로, 고유항목만을 골라 재나열하는 함수식이다. 먼저 COUNTIFS 함수는 `이미구한고유항목목록`과 `데이터목록` 일치여부를 비교하고 있다. `데이터목록`에서 새로운 항목이 나온다면 `이미구한고유항목목록`에는 없을 것이므로 개수가 0 이 되고 이를 MATCH 함수가 받아 INDEX 함수로 해당 항목을 출력하는 형태다.
 
