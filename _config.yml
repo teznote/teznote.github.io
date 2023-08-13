@@ -15,6 +15,9 @@ cats:
 - id: excel_formula
   title: Useful Excel Formulas
   order: title
+- id: coding
+  title: Coding
+  order: updated_desc
 - id: dev
   title: Develop Diary
   order: updated_desc

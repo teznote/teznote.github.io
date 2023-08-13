@@ -2,7 +2,7 @@
 layout: post
 title: "이진 탐색 (Binary Search)"
 updated: 2023-05-14
-tags: [dev,algorithm]
+tags: [algorithm]
 ---
 
 ## 이진 탐색

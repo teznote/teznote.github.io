@@ -2,7 +2,7 @@
 layout: post
 title: "Python 유용하면서 짤막한 함수 표현식들"
 updated: 2023-07-15
-tags: [dev,python]
+tags: [coding]
 ---
 
 ## 이 포스팅은...
