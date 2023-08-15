@@ -44,7 +44,7 @@ tags: [dev]
 
 태블릿에서 크롬을 열고 F-Droid 사이트에서 다운 받으면 된다. [링크](https://f-droid.org/ko/packages/com.termux/)를 클릭하고, 아래로 내려보면 Version 별 APK 파일을 다운받을 수 있게 해놓았다.
 
-APK 파일을 다운받고 설치한다.
+APK 파일을 다운받고 설치한다. 현재는 버전 0.118.0 이다.
 
 ## Termux 설정
 
@@ -84,7 +84,14 @@ pkg install vim
 ```
 {:.bash}
 
-설치가 끝나면, Code-Server 의 환경설정을 해줘야 한다. 아래 명령어를 실행한다.
+설치가 끝나면, Code-Server 가 잘 설치되었는지 확인과 환경설정을 해줘야 한다. 아래 명령어를 실행한다.
+
+```bash
+code-server --version
+```
+{:.bash}
+
+이 포스팅을 작성하는 시점에는 버전이 4.16.1 이다. 이제 환경설정을 수정한다.
 
 ```bash
 vim ~/.config/code-server/config.yaml
