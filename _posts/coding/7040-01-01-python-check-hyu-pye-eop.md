@@ -17,7 +17,9 @@ API 서비스를 사용하려면 공공데이터 포털에 가입하고 API 사�
 
 회사 업무 상 필요할 때가 있어서, 다량의 사업자번호를 주면 100 개씩 끊어서 계속 조회하고, 결과값을 CSV 파일로 저장해주는 코드를 구글링 통해 짜깁기 해봤다.
 
+
 ```python
+{% raw %}
 no = [
     "1111111111", "1111111112"    # 상태 조회를 원하는 사업자번호를 리스트 형태로 삽입
 ]
@@ -47,5 +49,6 @@ for i in range(len(no)//100+1):
         df.to_csv('output.csv', index=False, mode='w', encoding='utf-8-sig')
     else:
         df.to_csv('output.csv', index=False, mode='a', encoding='utf-8-sig', header=False)
+{% endraw %}
 ```
 {:.python}
