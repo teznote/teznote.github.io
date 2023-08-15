@@ -22,6 +22,8 @@ pkg install build-essential binutils pkg-config python3 nodejs-lts
 
 ## Numpy, Pandas 설치
 
+Termux 환경에서는 pip 이 제대로 작동하지 않는 경우가 있다. 대표적인 라이브러리가 Numpy, Pandas 인데 아래와 같이 설치하면 된다.
+
 ```bash
 pkg install python-pandas
 ```
