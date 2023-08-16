@@ -45,10 +45,8 @@ for i in range(len(no)//100+1):
 
     dict = pd.read_json(res.text)
     df = pd.json_normalize(dict['data']) 
-    if not os.path.exists('output.csv'):
-        df.to_csv('output.csv', index=False, mode='w', encoding='utf-8-sig')
-    else:
-        df.to_csv('output.csv', index=False, mode='a', encoding='utf-8-sig', header=False)
+    index, mode, encoding, header = [False, 'a', 'utf-8-sig', False] if os.path.exists('output.csv') else [False, 'w', 'utf-8-sig', True]
+    df.to_csv('output.csv', index=index, mode=mode, encoding=encoding, header=header)
 {% endraw %}
 ```
 {:.python}
