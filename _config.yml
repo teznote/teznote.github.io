@@ -15,7 +15,7 @@ c-color: #f5ab35
 cats:
 - id: msoffice
   title: MS Office
-  sub:
+  subs:
   - id: excel_formula
     title: Useful Excel Formulas
     order: title
