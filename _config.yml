@@ -10,7 +10,7 @@ kramdown:
         disable: true
 future: true
 
-c-color: #f5ab35
+c-color: "#f5ab35"
 
 cats:
 - id: msoffice
