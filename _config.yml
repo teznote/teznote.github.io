@@ -1,7 +1,7 @@
 remote_theme: teznote/tezdocs@v2.0.0
 
 title: "Tez'Note"
-footer-msg: "Themed by Tez &&<br/>Powered by Github Pages"
+bottom-msg: "Themed by Tez &&<br/>Powered by Github Pages"
 url: "https://teznote.github.io"
 permalink: /post/:title
 markdown: kramdown
