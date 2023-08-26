@@ -1,8 +1,7 @@
-remote_theme: teznote/tezskin@v6.4.2
+remote_theme: teznote/tezdocs@v2.0.0
 
 title: "Tez'Note"
-main-top-msg: "이것저것 기록하는 노트같은 블로그"
-footer-msg: "Powered by 깃허브 페이지"
+footer-msg: "Themed by Tez &&<br/>Powered by Github Pages"
 url: "https://teznote.github.io"
 permalink: /post/:title
 markdown: kramdown
@@ -11,13 +10,15 @@ kramdown:
         disable: true
 future: true
 
+c-color: #f5ab35
+
 cats:
-- id: excel_formula
-  title: Useful Excel Formulas
-  order: title
-- id: coding
-  title: Coding
-  order: updated_desc
-- id: dev
-  title: Develop Diary
-  order: updated_desc
+- id: msoffice
+  title: MS Office
+  sub:
+  - id: excel_formula
+    title: Useful Excel Formulas
+    order: title
+  - id: template
+    title: Templates
+    order: title
