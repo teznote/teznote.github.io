@@ -2,7 +2,7 @@
 layout: post
 title: "INDEX,MATCH,SUMPRODUCT: 목록에서 고유한 항목 개수를 세고, 추출하여 재나열하는 함수식"
 updated: 2021-08-16
-tags: [excel_formula]
+tags: [msoffice,excel_formula]
 ---
 
 ## 고유항목 개수 세거나 추출
@@ -11,7 +11,7 @@ tags: [excel_formula]
 
 만일 함수식으로 표현할 수 있다면, 데이터가 추가될 때마다 고유 데이터 표시가 자동으로 업데이트 될 것이다. 
 
-## INDEX, MATCH, SUMPRODUCT 함수 사용
+## 함수식 사용법
 
 아래는 데이터 목록에서 고유 데이터의 개수를 세고, 고유한 데이터만을 재나열해주는 함수식이다.
 

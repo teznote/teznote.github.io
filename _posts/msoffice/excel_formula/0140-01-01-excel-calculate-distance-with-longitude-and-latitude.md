@@ -2,7 +2,7 @@
 layout: post
 title: "RADIANS: 두 지점의 위도, 경도로 두 지점 간 거리 계산하기"
 updated: 2021-08-16
-tags: [excel_formula]
+tags: [msoffice,excel_formula]
 ---
 
 ## Haversine 공식
@@ -11,7 +11,7 @@ Haversine 공식이라는 것이 있다. [위키피디아](https://en.wikipedia.
 
 지구도 거의 구체에 가까우므로, 이 공식을 사용하면 두 지점의 위/경도로 두 지점 간 거리를 유추해낼 수 있다.
 
-## 두 지점의 거리 계산
+## 함수식 사용법
 
 ```excel
 = ACOS( COS( RADIANS( 90-위도1 )) * COS( RADIANS( 90-위도2 )) + SIN( RADIANS( 90-위도1 )) * SIN( RADIANS( 90-위도2 )) * COS( RADIANS( 경도1-경도2 ))) * 6378.137

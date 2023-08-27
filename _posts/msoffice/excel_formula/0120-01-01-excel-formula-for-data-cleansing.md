@@ -2,7 +2,7 @@
 layout: post
 title: "SUBSTITUTE,TRIM,CLEAN: 데이터 클렌징이 필요할 때 사용하는 함수식"
 updated: 2021-08-06
-tags: [excel_formula]
+tags: [msoffice,excel_formula]
 ---
 
 ## 데이터 클렌징이 필요한 경우

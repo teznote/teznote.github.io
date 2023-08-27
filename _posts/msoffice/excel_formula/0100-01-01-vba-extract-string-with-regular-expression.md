@@ -2,7 +2,7 @@
 layout: post
 title: "사용자정의 함수: 정규표현식으로 텍스트 안에서 특정 문자열 추출하기"
 updated: 2021-08-16
-tags: [excel_formula]
+tags: [msoffice,excel_formula]
 ---
 
 ## 정규표현식
@@ -11,7 +11,7 @@ tags: [excel_formula]
 
 이를 사용하면 텍스트 속에서 원하는 부분만 추출하거나, 주어진 텍스트가 형식(예를 들어 이메일 형식)에 맞게 제대로 쓰여져 있는지 검사하는데 있어 상당히 유용하다. 엑셀에서도 정규표현식을 사용할 수 있는데, 아래는 원하는 특정 문자열을 추출하는 사용자함수다.
 
-## VBA 코드
+## VBA 사용자함수로 구현
 
 ```vb
 Function RegexExecute(r As Range, p As String, Optional g As Boolean = False) As Variant
