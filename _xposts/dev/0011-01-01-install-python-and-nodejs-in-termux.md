@@ -16,7 +16,7 @@ Termux 는 Ubuntu 와 유사하지만 완전히 같지는 않다. 개발 환경�
 Termux 에 Python, NodeJS 개발 기본 환경을 구축하기 위해 아래와 같이 명령어를 입력한다.
 
 ```bash
-pkg install build-essential binutils pkg-config python3 nodejs-lts
+
 ```
 {:.bash}
 
