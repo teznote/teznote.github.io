@@ -54,4 +54,5 @@ wsl --install
 [VSCode](https://code.visualstudio.com/) 를 다운받고, 아래 Extention 들을 설치
 
 - [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+- [GitHub Repositories](https://marketplace.visualstudio.com/items?itemName=github.remotehub)
 {:.note}
