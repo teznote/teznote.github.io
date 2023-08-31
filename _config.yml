@@ -1,4 +1,4 @@
-remote_theme: teznote/tezdocs@v2.0.0
+remote_theme: teznote/tezdocs@v2.0.1
 
 title: "Tez'Note"
 bottom-msg: "Themed by Tez &&<br/>Powered by Github Pages"
@@ -11,6 +11,7 @@ kramdown:
 future: true
 
 c-color: "#f5ab35"
+main-color: "#ddeeff"
 
 cats:
 - id: msoffice
