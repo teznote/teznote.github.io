@@ -10,9 +10,6 @@ kramdown:
         disable: true
 future: true
 
-c-color: "#f5ab35"
-main-color: "#ddeeff"
-
 navtags:
 - id: excel_formula
   title: Useful Excel Formulas
