@@ -1,4 +1,4 @@
-remote_theme: teznote/tezdocs@v2.0.2
+remote_theme: teznote/tezskin@v7.0.0
 
 title: "Tez'Note"
 bottom-msg: "Themed by Tez &&<br/>Powered by Github Pages"
@@ -12,6 +12,11 @@ future: true
 
 c-color: "#f5ab35"
 main-color: "#ddeeff"
+
+navtags:
+- id: excel_formula
+  title: Useful Excel Formulas
+  order: title
 
 cats:
 - id: msoffice
