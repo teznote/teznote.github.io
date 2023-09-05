@@ -17,8 +17,8 @@ navtags:
 - id: template
   title: Useful Templates
   order: updated_desc
-- id: algorithm
-  title: Solving Algorithm
+- id: leetcode
+  title: Leetcode
   order: asc
 - id: dev
   title: Development Diary

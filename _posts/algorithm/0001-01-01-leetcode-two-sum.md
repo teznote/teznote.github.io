@@ -1,21 +1,17 @@
 ---
 layout: post
-title: "Array"
+title: "1. Two Sum"
 updated: 2023-09-05
-tags: algorithm
+tags: leetcode
 ---
 
-## Array
-
-이론적인 내용은 [나무위키](https://namu.wiki/w/%EB%B0%B0%EC%97%B4)를 찾아보면 된다.
-
-Array 는 동일한 형태의 데이터가 연속된 메모리로 저장되어 있는 자료구조로 이와 관련된 문제풀이는 대체로 **반복횟수를 얼마나 줄이느냐**와 관련이 있는 것 같다.
-
-## Two Sum
+## 문제
 
 [https://leetcode.com/problems/two-sum/](https://leetcode.com/problems/two-sum/)
 
 요약하면, nums 안에 합이 target 이 되는 두 요소 x, y 가 반드시 존재하는데, 두 요소의 인덱스를 리턴하는 문제다.
+
+## 풀이
 
 x, y 가 될만한 경우의 수를 모두 탐색해보는 가장 무식한 방법을 우선 생각할 수 있다.
 
