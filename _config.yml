@@ -14,22 +14,12 @@ navtags:
 - id: excel_formula
   title: Useful Excel Formulas
   order: title
+- id: template
+  title: Useful Templates
+  order: updated_desc
+- id: algorithm
+  title: Solving Algorithm
+  order: asc
 - id: dev
   title: Development Diary
   order: updated_desc
-
-cats:
-- id: msoffice
-  title: MS Office
-  subs:
-  - id: excel_formula
-    title: Useful Excel Formulas
-    order: title
-  - id: template
-    title: Templates
-    order: title
-- id: dev
-  title: Develop
-  subs:
-  - id: system
-    title: System

@@ -15,7 +15,7 @@ tags: dev
 
 ## WSL 설치
 
-기본적으로 [Windows 도움말](https://learn.microsoft.com/ko-kr/windows/wsl/install) 을 참고하면 된다.
+기본적으로 [Windows 도움말](https://learn.microsoft.com/ko-kr/windows/wsl/install)을 참고하면 된다.
 
 PowerShell 을 관리자모드로 실행하고 아래 명령어를 입력한다.
 
@@ -26,14 +26,14 @@ wsl --install
 
 설치 완료 메시지가 출력되면 요구하는대로 시스템을 재부팅한다.
 
-부팅되고 난 뒤, PowerShell 재실행 한고 (이 때는 관리자모드로 실행하지 않아도 된다.) 아래 명령어를 입력한다.
+부팅되고 난 뒤, PowerShell 재실행 하고 (이 때는 관리자모드로 실행하지 않아도 된다.) 아래 명령어를 입력한다.
 
 ```powershell
 wsl --install Ubuntu
 ```
 {:.PowerShell}
 
-중간에 유저네임과 패스워드를 물어보는데 원하는 유저네임과 패스워드를 입력한다.
+중간에 유저네임과 패스워드를 물어보는데 원하는 대로 입력한다.
 
 Ubuntu CLI 환경에 진입을 했다면 설치가 완료된 것이다. 창을 닫아도 된다.
 
@@ -47,7 +47,7 @@ VSCode 를 실행하고 아래 Extention 을 설치한다.
 - [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
 {:.note}
 
-첫번째 Extension 은 WSL 에 접근하기 위해 필요하고, 두번째는 작업을 하고 있는 위치를 기록해두면 언제든 다시 원클릭으로 접속할 수 있는 편의성을 제공한다.
+첫번째 Extension 은 WSL 에 접근하기 위해 필요하고, 두번째는 작업을 하고 있는 위치를 기록해두면 언제든 다시 원클릭으로 접근할 수 있는 편의성을 제공한다.
 
 ## Chrome Remote Desktop
 
@@ -57,7 +57,7 @@ VSCode 를 실행하고 아래 Extention 을 설치한다.
 
 설치가 정상적으로 진행되면 PIN 번호 입력을 요구하는데, 외부에서 이 컴퓨터에 원격으로 접근할 때 필요한 패스워드이므로 잘 기억해둔다.
 
-여기까지 진행했다면 외부 다른컴퓨터에서 [Chrome Remote Desktop](https://remotedesktop.google.com/access) 접속해서 원격으로 조작할 수 있다.
+여기까지 진행했다면 외부 다른 컴퓨터에서 [Chrome Remote Desktop](https://remotedesktop.google.com/access) 접속해서 원격으로 조작할 수 있다.
 
 ## 노트북 설정
 
