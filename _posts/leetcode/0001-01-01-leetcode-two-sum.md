@@ -13,6 +13,8 @@ tags: leetcode
 
 ## 풀이
 
+### 1. Brute Force
+
 x, y 가 될만한 경우의 수를 모두 탐색해보는 가장 무식한 방법을 우선 생각할 수 있다.
 
 ```py
@@ -27,9 +29,12 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 
 시간 초과로 문제를 풀 수 없다. 이중 루프 구조를 깨야 할 것 같다.
 
+### 2. Hash Table
+
 Hash Table 을 사용하면 반복을 한번으로 줄일 수 있다.
 
 ```py
+# Hash Table -> 60ms
 def twoSum(self, nums: List[int], target: int) -> List[int]:
     h = {}  # {number: index, ...}
     for i, x in enumerate(nums):
@@ -42,3 +47,22 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 {:.python}
 
 저장소 h 를 두고, nums 를 한번 순회한다. x 요소 차례가 되었을 때, 합이 target 이 되는 y 가 이미 저장소 h 에 있다면 바로 리턴하는 구조다.
+
+### 3. Hash Table 2
+
+똑같이 Hash Table 을 사용하지만, 첫 순회에서는 저장소 h 에 모든 수를 기록해두고, 다음 순회에서 x, y 를 찾는 방법을 택할 수도 있다.
+
+총 두번을 순회하지만 시간복잡도는 위 방식과 동일하다.
+
+```py
+# Hash Table 2 -> 67ms
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+    h = {x: i for i, x in enumerate(nums)}  # {number: index, ...}
+    for i, x in enumerate(nums):
+        y = target-x
+        if y in h and h[y] != i:
+            return h[y], i
+```
+{:.python}
+
+개인적으로는 이 방식이 코드를 이해하기가 더 쉬웠다.
