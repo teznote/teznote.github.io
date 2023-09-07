@@ -34,3 +34,13 @@ def romanToInt(self, s: str) -> int:
 {:.python}
 
 로마 숫자 s 를 마지막 한글자를 제외하고 순회하면서, 위에서 언급한 규칙을 적용하여 파싱한다. 순회를 마치면 for else 구문에서 마지막 한글자를 파싱하는 구조다.
+
+참고로, 파싱이 어려운 구조를 파싱이 쉬운 구조로 바꾸는 방법을 적용할 수도 있다. 이 문제에서는 `IV` 를 `IIII` 로, `IX` 를 `VIIII` 로 문자열을 바꿔서, 그냥 모든 로마 숫자를 더해버리는 방법도 생각해 볼 수 있다.
+
+코드 조각만 예시적으로 보이면 아래와 같다.
+
+```py
+ = s.replace('IV', 'IIII').replace('IX', 'VIIII').replace('XL', 'XXXX').replace('XC', 'LXXXX').replace('CD', 'CCCC').replace('CM', 'DCCCC')
+return sum(h[x] for x in s)
+```
+{:.python}
