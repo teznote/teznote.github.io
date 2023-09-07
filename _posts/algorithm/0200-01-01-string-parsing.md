@@ -37,10 +37,10 @@ def romanToInt(self, s: str) -> int:
 
 참고로, 파싱이 어려운 구조를 파싱이 쉬운 구조로 바꾸는 방법을 적용할 수도 있다. 이 문제에서는 `IV` 를 `IIII` 로, `IX` 를 `VIIII` 로 문자열을 바꿔서, 그냥 모든 로마 숫자를 더해버리는 방법도 생각해 볼 수 있다.
 
-코드 조각만 예시적으로 보이면 아래와 같다.
+주요 코드 보면 아래와 같다.
 
 ```py
- = s.replace('IV', 'IIII').replace('IX', 'VIIII').replace('XL', 'XXXX').replace('XC', 'LXXXX').replace('CD', 'CCCC').replace('CM', 'DCCCC')
+= s.replace('IV', 'IIII').replace('IX', 'VIIII').replace('XL', 'XXXX').replace('XC', 'LXXXX').replace('CD', 'CCCC').replace('CM', 'DCCCC')
 return sum(h[x] for x in s)
 ```
 {:.python}
