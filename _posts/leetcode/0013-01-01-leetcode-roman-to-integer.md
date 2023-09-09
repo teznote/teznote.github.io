@@ -1,15 +1,17 @@
 ---
 layout: post
-title: "[String] 파싱과 역파싱"
+title: "13. Roman to Integer"
 updated: 2023-09-07
 tags: algorithm
 ---
 
-## LeetCode: Roman to Integer
+## 문제
 
 [https://leetcode.com/problems/roman-to-integer/](https://leetcode.com/problems/roman-to-integer/)
 
-로마 숫자를 실제 숫자로 파싱해보는 문제다.
+로마 숫자를 실제 숫자로 파싱하는 문제다.
+
+## 풀이
 
 [로마 숫자](https://namu.wiki/w/%EB%A1%9C%EB%A7%88%20%EC%88%AB%EC%9E%90) 표기법을 들여다보면 아래와 같은 규칙을 찾을 수 있는데, 이 규칙이 문제를 푸는 핵심이다.
 
@@ -20,6 +22,7 @@ tags: algorithm
 두번째 규칙만 보자면, `IV` 는 I 뒤에 나오는 V 가 더 높은 숫자이므로 -1 로 보고 V 가 5 이므로 전체적으로 4 가 되는 원리다.
 
 ```py
+# Hash Table -> 46ms
 def romanToInt(self, s: str) -> int:
     h = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
     a = 0
@@ -37,10 +40,13 @@ def romanToInt(self, s: str) -> int:
 
 참고로, 파싱이 어려운 구조를 파싱이 쉬운 구조로 바꾸는 방법을 적용할 수도 있다. 이 문제에서는 `IV` 를 `IIII` 로, `IX` 를 `VIIII` 로 문자열을 바꿔서, 그냥 모든 로마 숫자를 더해버리는 방법도 생각해 볼 수 있다.
 
-주요 코드 보면 아래와 같다.
-
 ```py
-= s.replace('IV', 'IIII').replace('IX', 'VIIII').replace('XL', 'XXXX').replace('XC', 'LXXXX').replace('CD', 'CCCC').replace('CM', 'DCCCC')
-return sum(h[x] for x in s)
+# replace string -> 46ms
+def romanToInt(self, s: str) -> int:
+    h = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
+
+    s = s.replace('IV', 'IIII').replace('IX', 'VIIII').replace('XL', 'XXXX').replace('XC', 'LXXXX').replace('CD', 'CCCC').replace('CM', 'DCCCC')
+    
+    return sum(h[x] for x in s)
 ```
 {:.python}
