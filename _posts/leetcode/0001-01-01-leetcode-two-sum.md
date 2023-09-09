@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hash Table"
+title: "1. Two Sum"
 updated: 2023-09-07
 tags: leetcode
 ---
