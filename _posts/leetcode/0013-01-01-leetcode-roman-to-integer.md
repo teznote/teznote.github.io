@@ -2,7 +2,7 @@
 layout: post
 title: "13. Roman to Integer"
 updated: 2023-09-07
-tags: algorithm
+tags: leetcode
 ---
 
 ## 문제

@@ -2,7 +2,7 @@
 layout: post
 title: "14. Longest Common Prefix"
 updated: 2023-09-09
-tags: algorithm
+tags: leetcode
 ---
 
 ## 문제

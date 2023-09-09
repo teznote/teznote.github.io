@@ -2,7 +2,7 @@
 layout: post
 title: "Hash Table"
 updated: 2023-09-07
-tags: algorithm
+tags: leetcode
 ---
 
 ## 문제
