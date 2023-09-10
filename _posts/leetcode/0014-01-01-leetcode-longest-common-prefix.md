@@ -79,7 +79,7 @@ def longestCommonPrefix(self, strs: List[str]) -> str:
 ```
 {:.python}
 
-Trie 그래프의 각 노드를 나타내는 Node 클래스를 정의하였다. key 속성에는 어떤 문자인지를, data 속성에는 만일 어떤 단어의 끝부분에 해당하는 노드라면 해당 단어를, children 속성에는 다음 노드의 위치를 넣도록 하였다.
+Trie 자료구조의 각 노드를 나타내는 Node 클래스를 정의하였다. key 속성에는 어떤 문자인지를, data 속성에는 만일 어떤 단어의 끝부분에 해당하는 노드라면 해당 단어를, children 속성에는 다음 노드의 위치를 넣도록 하였다.
 
 주어진 단어들이 담긴 strs 리스트를 word 로 순회, 다시 word 를 x 로 순회하면서, 문자 x 를 Trie 에 삽입 한다.
 
