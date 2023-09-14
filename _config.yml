@@ -22,6 +22,7 @@ navtags:
     order: updated_desc
 - id: section_2
   title: Coding
+  subs:
   - id: leetcode
     title: LeetCode
     order: asc
