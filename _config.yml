@@ -1,6 +1,5 @@
-remote_theme: teznote/tezdocs@v2.0.2
+remote_theme: teznote/tezdocs@v3.0.1
 title: Tez'Note
-url: "https://teznote.github.io"
 permalink: /post/:title
 markdown: kramdown
 kramdown:
