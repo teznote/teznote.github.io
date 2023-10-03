@@ -1,31 +1,16 @@
-remote_theme: teznote/tezskin@v7.1.0
-
-title: "Tez'Note"
-bottom-msg: "Themed by Tez &&<br/>Powered by Github Pages"
-url: "https://teznote.github.io"
+remote_theme: teznote/tezskin@v3.0.0
+title: Tez'Note
 permalink: /post/:title
 markdown: kramdown
 kramdown:
-    syntax_highlighter_opts:
-        disable: true
+  syntax_highlighter_opts:
+    disable: true
 future: true
 
-navtags:
-- id: section_1
-  title: MS Office
-  subs:
-  - id: excel_formula
-    title: Useful Excel Formulas
-    order: title
-  - id: template
-    title: Useful Templates
-    order: updated_desc
-- id: section_2
-  title: Coding
-  subs:
-  - id: leetcode
-    title: LeetCode
-    order: asc
-  - id: dev
-    title: Development Diary
-    order: updated_desc
+cats:
+  - id: msoffice
+    title: MS Office
+    subs:
+      - id: formula
+        title: Excel Formula
+        order: title
