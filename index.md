@@ -1,9 +1,13 @@
 ---
 layout: post
 title: "Tez'Note 는..."
-updated: 2023-08-11
-tags: [teznote,front_page]
+updated: 2023-10-03
+tags: [teznote,home,front_page]
 ---
+
+## 231003 다시금 레이아웃 재수정
+
+다크모드로 전환할 수 있는 스위치를 추가하고, 다시 기술블로그 스타일로 돌아갔다.
 
 ## 230905 다시 레이아웃 수정
 
