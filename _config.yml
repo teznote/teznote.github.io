@@ -14,4 +14,4 @@ cats:
     subs:
       - id: formula
         title: Excel Formula
-        order: title
+        order: asc
