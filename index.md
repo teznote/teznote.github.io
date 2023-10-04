@@ -15,7 +15,7 @@ tags: [teznote,home,front_page]
 
 서체는 [나눔 스퀘어 네오](https://campaign.naver.com/nanumsquare_neo/#introduce)를 기본으로 하되, 코딩을 표현하기 위해 [Hack](https://sourcefoundry.org/hack/) 서체를 사용했다.
 
-아이콘은 [Bootstrap 아이콘](https://icons.getbootstrap.com/) 을, 그리고 코드 하이라이터로 [highlight.js](https://highlightjs.org/) 를 사용했다.
+아이콘은 [Bootstrap 아이콘](https://icons.getbootstrap.com/)을, 그리고 코드 하이라이터로 [highlight.js](https://highlightjs.org/) 를 사용했다.
 
 사실 블로그 리부팅을 하게 된 계기는 [Tailwind CSS](https://tailwindcss.com/) 를 필두로 한 Atomic CSS 를 알고 나서 부터다. class 작명이나 HTML 파일과 CSS 파일을 번갈아가며 수정하는 것이 고역이긴 해서 관심을 가졌다. 다만, Atomic CSS 를 적용하면 HTML 파일이 매우 지저분해지는 것과 복잡한 selector 지정의 어려움 때문에 결국은 원래 방식으로 돌아오기는 했다. 그래도 새로운 방법론을 알게 되어 나름 즐거운 경험이었다.
 
