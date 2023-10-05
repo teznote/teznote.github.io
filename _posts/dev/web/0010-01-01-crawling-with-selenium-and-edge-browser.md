@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selenum 과 Edge 브라우저로 크롤링 하기
+title: Selenium 과 Edge 브라우저로 크롤링 하기
 updated: 2023-10-05
 tags: [dev,web]
 ---
@@ -48,7 +48,7 @@ Windows 로고 키 클릭 --> `Edge' 입력 --> Edge 로고에 마우스 커서 
 
 ## Selenium Webdriver 다운로드
 
-[Microsoft 도큐먼트](https://learn.microsoft.com/en-us/microsoft-edge/webdriver-chromium/?tabs=c-sharp) 사이트를 보면 Edge 용 Selenium Webdriver 다운로드를 안내하고 있다.
+[Microsoft 문서](https://learn.microsoft.com/en-us/microsoft-edge/webdriver-chromium/?tabs=c-sharp) 사이트를 보면 Edge 용 Selenium Webdriver 다운로드를 안내하고 있다.
 
 읽어보면, 본인의 Edge 의 버전을 확인 --> [다운로드 링크](https://developer.microsoft.com/ko-kr/microsoft-edge/tools/webdriver/)로 이동 --> Edge 버전과 OS 시스템 맞게 다운로드하면 된다.
 
@@ -56,14 +56,14 @@ Windows 로고 키 클릭 --> `Edge' 입력 --> Edge 로고에 마우스 커서 
 
 ## Python 코드 작성
 
-Windows 터미널 환경에서 아래 명령어를 통해 Selenium 과 크롤링 결과를 csv 파일로 저장하기 위한 Pandas 모듈을 설치한다.
+크롤링 하려면 Selenium 과 그 결과를 csv 파일로 저장하기 위한 Pandas 모듈이 설치되어 있어야 한다. 설치하려면 아래명령어를 Windows 터미널 환경에서 실행한다.
 
 ```bash
 python -m pip install selenium pandas
 ```
 {:.note}
 
-그리고 크롤링에 있어 핵심적인 코드는 아래와 같다.
+그리고 크롤링에 있어 핵심적인 Python 코드는 아래와 같다.
 
 ```python
 from selenium import webdriver
@@ -94,7 +94,7 @@ if not os.path.exists('output.csv'):
 ```
 {:.python}
 
-위에서 언급한 `msedgedriver.exe` 가 Python 파일과 같은 폴더에 위치해야 한다. (다른 폴더에 넣고 경로 지정을 해줄 수도 있지만 굳이 그럴 필요는 없었다.)
+위에서 언급한 `msedgedriver.exe` 가 Python 파일과 같은 폴더에 위치해야 한다. (다른 폴더에 넣고 경로 지정을 해줄 수도 있지만 굳이 그럴 필요까지는 없다.)
 
 코드를 실행하면 이미 열려있는 Edge 브라우저에서 크롤링 작업이 진행되며, 결과는 Python 파일이 실행된 폴더에 `output.csv` 파일로 저장이 된다.
 
