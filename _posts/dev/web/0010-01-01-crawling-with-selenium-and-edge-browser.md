@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Selenium 과 Edge 브라우저로 크롤링 하기
+title: "Python: Selenium 과 Edge 브라우저로 크롤링 하기"
 updated: 2023-10-05
 tags: [dev,web]
 ---
