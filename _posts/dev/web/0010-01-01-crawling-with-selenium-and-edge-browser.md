@@ -90,11 +90,10 @@ if not os.path.exists('output.csv'):
   mode, header = 'w', True 
 
  df.to_csv('output.csv', index=False, mode=mode, encoding='utf-8-sig', header=header)
-
 ```
 {:.python}
 
-위에서 언급한 `msedgedriver.exe` 가 Python 파일과 같은 폴더에 위치해야 한다. (다른 폴더에 넣고 경로 지정을 해줄 수도 있지만 굳이 그럴 필요까지는 없다.)
+위에서 언급한 `msedgedriver.exe` 가 Python 파일과 같은 폴더에 위치해야 한다. (다른 폴더에 넣고 경로 지정을 해줄 수도 있지만 굳이 그럴 필요는 없을 것이다.)
 
 코드를 실행하면 이미 열려있는 Edge 브라우저에서 크롤링 작업이 진행되며, 결과는 Python 파일이 실행된 폴더에 `output.csv` 파일로 저장이 된다.
 
