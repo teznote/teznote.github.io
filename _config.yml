@@ -1,4 +1,4 @@
-remote_theme: teznote/tezdocs@v3.1.1
+remote_theme: teznote/tezdocs@v3.1.0
 title: Tez'Note
 permalink: /post/:title
 markdown: kramdown
