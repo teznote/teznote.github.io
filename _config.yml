@@ -14,6 +14,9 @@ cats:
       - id: formula
         title: Excel Formula
         order: title
+      - id: template
+        title: Useful template
+        order: title
   - id: dev
     title: Development Diary
     subs:
