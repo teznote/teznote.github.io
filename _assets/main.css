@@ -51,15 +51,12 @@ b, strong {
   }
   >blockquote {
     @apply p-[0.5rem] font-size-[0.9rem] bg-[var(--bg-b)] border-l-[0.25rem] border-l-color-[var(--bg-border)] border-l-solid rounded-[0.25rem];
-    >p {
-      @apply mt-[1.25rem];
-    }
     >p:nth-child(1) {
-      @apply mt-0
+      @apply mt-0 mb-[1.35rem];
     }
   }
   >pre {
-    @apply @apply w-full font-size-[0.9rem] bg-[var(--bg-b)] border-l-[0.25rem] border-l-color-[var(--bg-border)] rounded-[0.25rem] overflow-x-auto;
+    @apply @apply w-full font-size-[0.9rem] bg-[var(--bg-b)] border-l-[0.25rem] border-l-color-[var(--bg-border)] border-l-solid rounded-[0.25rem] overflow-x-auto;
     >code {
       @apply w-full min-w-[fit-content] min-w-[-moz-fit-content] p-[0.5rem] block;
     }
