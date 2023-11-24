@@ -77,7 +77,7 @@ function build_md() {
       content = minify(content, { collapseWhitespace: true })
       const tar_json = './docs' + (pathname === '/' ? '/index' : pathname) + '.json'
       fs.outputJSONSync(tar_json, { pathname, ver, content })
-      pageinfo_new.push({ pathname, ...page, tar_json, src_md })
+      pageinfo_new.push({ pathname, ver, ...page, tar_json, src_md })
     } else {
       pageinfo_new.push(exist_md)
     }
