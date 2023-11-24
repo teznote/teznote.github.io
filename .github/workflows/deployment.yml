@@ -12,19 +12,25 @@ jobs:
           node-version: 18
           cache: npm
       - run: npm ci
-      - name: Build and Commit
+      - run: node build md
+      - run: git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
+      - name: update
+        if: steps.verify_diff.outputs.changed == 'true'
         env:
           USER_NAME: ${{ github.event.pusher.name }}
           USER_EMAIL: ${{ github.event.pusher.email }}
         run: |
-          node build md
           git config --global user.name "$USER_NAME"
           git config --global user.email "$USER_EMAIL"
           git add .
           git commit -m "deployment"
           git push
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        if: steps.verify_diff.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          path: './docs'
+      - name: Deploy to GitHub Pages
+        if: steps.verify_diff.outputs.changed == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v2
