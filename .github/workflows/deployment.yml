@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: 18
           cache: npm
-        run: npm ci
+      - run: npm ci
       - name: Build and Commit
         env:
           USER_NAME: ${{ github.event.pusher.name }}
