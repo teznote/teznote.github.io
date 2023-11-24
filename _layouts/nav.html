@@ -1,0 +1,28 @@
+---
+categories:
+  - id: excel-formula
+    title: 엑셀 함수식
+  - id: msoffice-template
+    title: MS오피스 템플릿
+---
+
+<nav>
+  <div>
+    <div class="font-size-[1.75rem]">카테고리</div>
+    <ul id="nav-categories">
+      {% for cat in categories %}
+        <li><a href="#{{ cat.id }}">{{ cat.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% for cat in categories %}
+    <ul id="{{ cat.id }}" class="mt-[3rem] mb-[1rem]">
+      <div class="font-size-[1.75rem]">{{ cat.title }}</div>
+      {% for page in pages %}
+        {% if page.pathname contains cat.id%}
+          <li><a href="{{ page.pathname }}">{{ page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</nav>

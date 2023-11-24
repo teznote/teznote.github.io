@@ -1,0 +1,23 @@
+name: My Github Action
+on:
+  push:
+    branches: [ gh-pages ]
+  pull_request:
+    branches: [ gh-pages ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+      - run: npm ci
+      - run: node build md
+      - run: |
+          git config --global user.name "teznote"
+          git config --global user.email "teznote@outlook.com"
+          git add -A
+          git commit -m "commit message"
+          git push
