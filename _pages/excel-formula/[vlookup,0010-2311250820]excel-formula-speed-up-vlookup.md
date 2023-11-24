@@ -2,7 +2,7 @@
 layout: page
 title: "VLOOKUP: 유사일치 방식으로 VLOOKUP 속도 높이기"
 updated: 2023-05-08
-tags: [msoffice,formula]
+tags: excel-formula
 ---
 
 ## VLOOKUP 정확한일치검색 단점
