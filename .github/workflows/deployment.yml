@@ -20,12 +20,9 @@ jobs:
         run: git diff --quiet . || echo "changed=true" >> $GITHUB_OUTPUT
       - name: update
         if: steps.verify_diff.outputs.changed == 'true'
-        env:
-          USER_NAME: ${{ github.event.pusher.name }}
-          USER_EMAIL: ${{ github.event.pusher.email }}
         run: |
-          git config --global user.name "$USER_NAME"
-          git config --global user.email "$USER_EMAIL"
+          git config --global user.name "teznote"
+          git config --global user.email "teznote@outlook.com"
           git add .
           git commit -m "deployment"
           git push
