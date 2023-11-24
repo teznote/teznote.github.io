@@ -6,16 +6,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Prepare Build
+        uses: actions/checkout@v4
+        uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
-      - run: npm ci
-      - run: node build md
-      - run: |
-          git config --global user.name "teznote"
-          git config --global user.email "teznote@outlook.com"
-          git add -A
-          git commit -m "commit message"
+        run: npm ci
+      - name: Build and Commit
+        env:
+          USER_NAME: ${{ github.event.pusher.name }}
+          USER_EMAIL: ${{ github.event.pusher.email }}
+        run: |
+          node build md
+          git config --global user.name "$USER_NAME"
+          git config --global user.email "$USER_EMAIL"
+          git add .
+          git commit -m "deployment"
           git push
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
