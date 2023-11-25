@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: page
 title: "Apps Script 로 구글 캘린더를 다른 캘린더로 자동 복사"
+description: 구글 Apps Script 활용하여 구글 캘린더 일정을 자동으로 복사
 updated: 2023-06-13
-tags: [dev,web]
+tags: dev
 ---
 
 ## 구글 캘린더를 다른 캘린더로 복사
@@ -11,9 +12,13 @@ tags: [dev,web]
 
 일정이 생길 때마다 확인해서 수동으로 복사해주면 되긴 했지만, 일정 변경이나 삭제가 잦을 때는 귀찮기도 해서 자동화 할 수 있는 방법이 없을까 찾아보았다.
 
-찾아보니, 구글에서 제공하는 다양한 웹 어플리케이션을 자동화 할 수 있는 [Apps Script](https://www.google.com/script/start/) 가 있어 이를 사용해보기로 했다. MS오피스에서 VBA를 다루는 것과 비슷한 느낌이다.
+찾아보니, 구글에서 제공하는 다양한 웹 어플리케이션을 자동화 할 수 있는 [Apps Script](https://www.google.com/script/start/) 가 있어 이를 사용해보기로 했다. MS 오피스에서 VBA 를 다루는 것과 비슷한 느낌이다.
 
 결론부터 얘기하자면 뭔가 오류가 많은 것 같아 잘 사용하지는 않을 것 같다. (몰론 본인이 제대로 만들어내지도 못하는 것일 수도 있다.) 스크립트를 수동을 실행하면 잘 작동하는데, 트리거에 등록하여 매시간마다 작동하도록 했더니 경우에 따라 작동하지 않는 케이스도 있었다.
+
+## 프로젝트 설정
+
+위에 언급한 Apps Script 링크를 타고, 로그인 후, 새 프로젝트를 선택하면 자동으로 편집기가 열린다. 그곳에 코드를 작성하면 되고, 왼쪽 메뉴를 보면 시계모양의 트리거도 등록하여 정기적으로 실행되도록 할 수 있다.
 
 ## 구현 로직
 
@@ -35,24 +40,23 @@ var token = PropertiesService.getScriptProperties().getProperty(`${src_id}_syncT
 
 var srcs;
 if (token) {
-    srcs = Calendar.Events.list(src_id, {'syncToken': token});
+  srcs = Calendar.Events.list(src_id, {'syncToken': token});
 } else {
-    var d = new Date();
-    d.setDate(d.getDate() - 30);
-    srcs = Calendar.Events.list(src_id, {'timeMin': d.toISOString()});
+  var d = new Date();
+  d.setDate(d.getDate() - 30);
+  srcs = Calendar.Events.list(src_id, {'timeMin': d.toISOString()});
 }
 PropertiesService.getScriptProperties().setProperty(`${src_id}_syncToken`, srcs.nextSyncToken);
 
 for (var x of srcs.items) {
-    try {
-        Calendar.Events.insert(x, tar_id);
-    } catch(e) {
-        delete x.sequence;
-        Calendar.Events.update(x, tar_id, x.id);
-    }
+  try {
+    Calendar.Events.insert(x, tar_id);
+  } catch(e) {
+    delete x.sequence;
+    Calendar.Events.update(x, tar_id, x.id);
+  }
 }
 ```
-{:.javascript}
 
 ## TAR 의 일정을 SRC 일정에 맞춤
 
@@ -63,16 +67,15 @@ f.setDate(f.getDate() + 30);
 var tars = Calendar.Events.list(tar_id, {'timeMin': new Date().toISOString(), 'timeMax': f.toISOString()});
 
 for (var x of tars.items) {
-    try {
-        var w = Calendar.Events.get(src_id, x.id);
-        delete x.sequence;
-        delete w.sequence;
-        if (w !== x) {
-            Calendar.Events.update(w, tar_id, w.id);
-        }
-    } catch(e) {
-        Calendar.Events.remove(tar_id, x.id);
+  try {
+    var w = Calendar.Events.get(src_id, x.id);
+    delete x.sequence;
+    delete w.sequence;
+    if (w !== x) {
+      Calendar.Events.update(w, tar_id, w.id);
     }
+  } catch(e) {
+    Calendar.Events.remove(tar_id, x.id);
+  }
 }
 ```
-{:.javascript}
