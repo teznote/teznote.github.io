@@ -31,7 +31,7 @@ categories:
       {% else %}
         {% for page in pages %}
           {% if page.pathname contains cat.id%}
-            <li><a href="{{ page.pathname }}">{{ page.title }}</a></li>
+            <li><a href="{{ page.pathname }}">{{ page.title }}</a> <span class="color-[var(--fg-b)]">{{ page.updated }}</span></li>
           {% endif %}
         {% endfor %}
       {% endif %}
