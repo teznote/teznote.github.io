@@ -61,7 +61,6 @@ site:
           res = await (await fetch('/404.json')).json()
         }
         document.querySelector('main').innerHTML = res.content
-        document.querySelector('body >div').scrollTo({ top: 0 })
       }
       document.body.onclick = e => {
         if (e.target.matches('a') && e.target.href.startsWith(window.location.origin) && !e.target.getAttribute('href').match(/[.#]/)) {
@@ -69,6 +68,7 @@ site:
           if (e.target.href !== window.location.href) {
             history.pushState(null, null, e.target.href)
             fill_content()
+            document.querySelector('body >div').scrollTo({ top: 0 })
           }
         }
       }
