@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "INDEX,MATCH: VLOOKUP 대신 사용할 수 있는 보다 유용한 검색식"
+description: VLOOKUP 보다 더 유연한 검색과 결과를 보이는 INDEX, MATCH 함수식
 updated: 2023-10-03
 tags: excel-formula
 ---
@@ -9,8 +10,6 @@ tags: excel-formula
 
 VLOOKUP 은 아래와 같은 점들이 불편하게 느껴질 때가 있다.
 
-> NOTE
->
 > - 검색기준열이 검색범위의 가장 왼쪽열로 항상 고정
 > - 두가지 이상 조건으로 검색 어려움
 > - 면으로 검색 (VLOOKUP 과 HLOOKUP 의 혼합) 불가능
@@ -26,7 +25,7 @@ INDEX, MATCH 함수 조합을 사용하면 위 불편한 점들을 개선할 수
 <!--#endregion-->
 
 ```excel
-= VLOOKUP( 검색값, 검색범위, 열번호, false)
+= VLOOKUP( 검색값, 검색범위, 열번호, FALSE)
 = INDEX( 검색대상열, MATCH( 검색값, 검색기준열, 0 ))
 ```
 
@@ -48,7 +47,7 @@ INDEX, MATCH 함수조합은 VLOOKUP 과 달리 `검색기준열`과 `검색대�
 
 위 수식은 **배열수식**이다. 조건들은 * 연산자로 `(검색기준열n=검색값n)` 과 같은 `조건식`을 계속 붙여나가면 된다.
 
-참고로 엑셀에서 `조건식`의 결과는 true 혹은 false 인데, 이들에게 사칙연산을 가하면 true 는 1 로, false 는 0 으로 치환하여 계산한다. 따라서 모든 `조건식`이 true 인 경우에만 곱셈의 결과가 1 이므로, MATCH 함수의 첫번째 인수 (즉, 찾는값) 를 1 로 지정한 것이다. 
+참고로 엑셀에서 `조건식`의 결과는 TRUE 혹은 FALSE 인데, 이들에게 사칙연산을 가하면 TRUE 는 1 로, FALSE 는 0 으로 치환하여 계산한다. 따라서 모든 `조건식`이 TRUE 인 경우에만 곱셈의 결과가 1 이므로, MATCH 함수의 첫번째 인수 (즉, 찾는값) 를 1 로 지정한 것이다. 
 
 ## 면으로 검색 (VLOOKUP 과 HLOOKUP 의 혼합)
 
@@ -69,7 +68,7 @@ INDEX 안 첫번째 MATCH 는 열방향(세로방향) 검색을, 두번째는 �
 <!--#endregion-->
 
 ```excel
-{= INDEX( 검색대상열, MATCH( true, EXACT( 검색값, 검색기준열 ), 0 ))}
+{= INDEX( 검색대상열, MATCH( TRUE, EXACT( 검색값, 검색기준열 ), 0 ))}
 ```
 
 위 수식은 **배열수식**이다.
