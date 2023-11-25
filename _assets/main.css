@@ -33,6 +33,12 @@ body {
 pre, code, samp, kbd {
   @apply font-mono;
 }
+ul li {
+  @apply ml-[1rem];
+  &:before {
+    @apply content-['-'] w-[1rem] ml-[-1rem] inline-block text-left;
+  }
+}
 a, a:link, a:visited, a:hover, a:active {
   @apply decoration-none font-bold color-[var(--fg-link)] border-b-[1px] border-b-dashed border-b-[var(--fg-link)]; 
 }
@@ -49,11 +55,11 @@ b, strong {
   >p, >pre, >blockquote, >div, >h3, >h4, >h5, >h6 {
     @apply my-[1.5rem];
   }
+  >p >code {
+    @apply color-[var(--bg-b)] bg-[var(--fg-b)] rounded-[0.25rem];
+  }
   >blockquote {
     @apply p-[0.5rem] font-size-[0.9rem] bg-[var(--bg-b)] border-l-[0.25rem] border-l-color-[var(--bg-border)] border-l-solid rounded-[0.25rem];
-    >p:nth-child(1) {
-      @apply mt-0 mb-[1.35rem];
-    }
   }
   >pre {
     @apply @apply w-full font-size-[0.9rem] bg-[var(--bg-b)] border-l-[0.25rem] border-l-color-[var(--bg-border)] border-l-solid rounded-[0.25rem] overflow-x-auto;
@@ -65,12 +71,6 @@ b, strong {
     @apply max-w-full mx-auto block align-bottom;
     &+em {
       @apply block font-size-[0.9rem] text-center color-[var(--fg-b)];
-    }
-  }
-  ul li {
-    @apply ml-[1rem];
-    &:before {
-      @apply content-['-'] w-[1rem] ml-[-1rem] inline-block text-left;
     }
   }
 }
