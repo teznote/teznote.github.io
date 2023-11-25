@@ -16,7 +16,7 @@ categories:
     </ul>
   </div>
   {% for cat in categories %}
-    <ul id="{{ cat.id }}" class="mt-[3rem] mb-[1rem]">
+    <ul id="{{ cat.id }}" class="mt-[-6.5rem] pt-[3.5rem] mb-[1rem]">
       <div class="font-size-[1.75rem]">{{ cat.title }}</div>
       {% for page in pages %}
         {% if page.pathname contains cat.id%}

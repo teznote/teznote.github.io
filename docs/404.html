@@ -11,7 +11,7 @@
         document.querySelector('main').innerHTML = res.content
       }
       document.body.onclick = e => {
-        if (e.target.matches('a') && e.target.href.startsWith(window.location.origin) && !e.target.href.match(/\.\w+$/)) {
+        if (e.target.matches('a') && e.target.href.startsWith(window.location.origin) && !e.target.getAttribute('href').match(/[.#]/)) {
           e.preventDefault()
           if (e.target.href !== window.location.href) {
             history.pushState(null, null, e.target.href)
