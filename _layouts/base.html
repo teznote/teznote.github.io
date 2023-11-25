@@ -14,7 +14,7 @@ site:
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-nanum-square-round@1.0.2/nanumsquareround.min.css" />
     <link rel="stylesheet" href="/main.css" />
   </head>
-  <body class="fixed top-0 right-0 bottom-0 left-0 color-[var(--fg-a)] bg-[var(--bg-a)]">
+  <body class="fixed top-0 right-0 bottom-0 left-0 color-[var(--fg-a)] bg-[var(--bg-a)] line-height-normal">
     <div class="h-full w-full overflow-y-scroll">
       <div class="sticky top-0 h-[3.5rem] w-full bg-[var(--bg-b)] overflow-hidden">
         <header class="h-full w-full max-w-[60rem] mx-auto px-[0.5rem]">
@@ -63,7 +63,7 @@ site:
         document.querySelector('main').innerHTML = res.content
       }
       document.body.onclick = e => {
-        if (e.target.matches('a') && e.target.href.startsWith(window.location.origin)) {
+        if (e.target.matches('a') && e.target.href.startsWith(window.location.origin) && !e.target.href.match(/\.\w+$/)) {
           e.preventDefault()
           if (e.target.href !== window.location.href) {
             history.pushState(null, null, e.target.href)
