@@ -1,15 +1,16 @@
 ---
 layout: page
 title: "CELL: Sheet 이름을 동적으로 불러오는 함수식"
+description: 특정 셀이 위치한 Sheet 이름을 불러오는 함수식
 updated: 2021-08-05
-tags: [msoffice,formula]
+tags: excel-formula
 ---
 
 ## Sheet 이름 동적 연결
 
 엑셀 작업을 하다보면 가끔은 Sheet 이름을 동적으로 불러서 연결해야 할 때가 있다. 예를들면, 부서별로 Sheet 를 만들어서 해당 Sheet 안에 "OO부서" 와 같은 내용이 들어가는 경우처럼 말이다.
 
-엑셀 Sheet 이름을 알아낼 수 있는 함수식을 사용하면 가능하다. 
+"동적"으로 불러들인다는 뜻은, Sheet 이름을 바꾸면 자동으로 함수식의 결과도 자동으로 바뀐다는 뜻이다.
 
 ## CELL 함수 사용 방법
 
@@ -21,14 +22,12 @@ tags: [msoffice,formula]
 ```excel
 = MID( CELL( "filename", 셀 ), FIND( "]", CELL( "filename", 셀 )) + 1, 256 )
 ```
-{:.excel}
 
 위 식에서 `셀` 부분에는 이름을 불러오길 원하는 Sheet 안의 아무 셀이나 지정하면 된다. 다른 Sheet 의 셀을 지정하면 그 다른 Sheet 의 이름을 불러온다. 그리고 Sheet 이름을 바뀌면 함수식의 결과도 알아서 자동으로 바뀐다.
 
 사용할 땐 **아래 사항에 주의**해야 한다.
 
-새로 엑셀 문서를 만들고 아직 한번도 저장을 안한 상태에서 위 함수식을 사용하면 에러가 발생한다. 에러가 발생했다면 바로 저장하고 F9 키를 눌러 수식 재계산을 해주면 된다.
-{:.note}
+> 새로 엑셀 문서를 만들고 아직 한번도 저장을 안한 상태에서 위 함수식을 사용하면 에러가 발생한다. 에러가 발생했다면 바로 저장하고 F9 키를 눌러 수식 재계산을 해주면 된다.
 
 즉, 반드시 한번이라도 저장된 엑셀문서에서 사용해야 한다는 것인데, 이유는 CELL 의 첫번째 인수인 "filename" 때문이다.
 
@@ -39,16 +38,16 @@ CELL 의 첫번째 인수를 "filename" 이라 지정하면 폴더경로, 파일
 VBA 로 위와 같은 기능을 하는 사용자함수를 만들 수 있다. CELL 을 사용한 함수식과는 다르게 한번도 파일로 저장안했어도 사용이 가능하다.
 
 ```vb
+' vba
+
 Function SheetName(rCell As Range) As String
   Application.Volatile
   SheetName = rCell.Parent.Name
 End Function
 ```
-{:.vba}
 
 ```excel
 = SheetName( 셀 )
 ```
-{:.excel}
 
 이 역시 `셀` 부분에는 Sheet 이름을 얻고자 하는 Sheet 의 아무 셀이나 지정하면 된다.

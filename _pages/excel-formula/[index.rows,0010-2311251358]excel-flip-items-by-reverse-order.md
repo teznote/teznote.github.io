@@ -1,8 +1,9 @@
 ---
 layout: page
 title: "INDEX,ROWS: 열에 있는 데이터들을 역순으로 재나열하는 함수식"
+description: 세로로 나열되어 있는 데이터를 읽어서 역순으로 다시 재나열하는 함수식
 updated: 2021-08-18
-tags: [msoffice,formula]
+tags: excel-formula
 ---
 
 ## 데이터 순서 역순으로 재나열
@@ -19,7 +20,6 @@ tags: [msoffice,formula]
 ```excel
 = INDEX( 목록범위, ROWS( 변형된목록범위 ))
 ```
-{:.excel}
 
 `목록범위`는 순서 뒤집기를 원하는 데이터들 범위를 지정하면 된다.
 
