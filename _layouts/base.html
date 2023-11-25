@@ -61,6 +61,7 @@ site:
           res = await (await fetch('/404.json')).json()
         }
         document.querySelector('main').innerHTML = res.content
+        window.scrollTo({ top: 0 })
       }
       document.body.onclick = e => {
         if (e.target.matches('a') && e.target.href.startsWith(window.location.origin) && !e.target.getAttribute('href').match(/[.#]/)) {
