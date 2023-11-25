@@ -14,6 +14,30 @@ import { minify } from 'html-minifier'
 import hljs from 'highlight.js'
 import markdownIt from 'markdown-it'
 
+hljs.registerLanguage("pseudo", function(hljs) {
+  return {
+    aliases: ['ps'],
+    contains: [
+      {
+        className: 'comment',
+        begin: /#/,
+        end: /\s\s|\n|$/,
+      },
+      {
+        className: 'strong',
+        begin: /\b[A-Z][A-Z0-9]*\b/,
+      },
+      {
+        className: 'number',
+        begin: /\b[0-9]+\b/,
+      },
+      {
+        className: 'leadline',
+        begin: /[-+*\/><=!^ṿ|?\\]+/,
+      },
+    ],
+  }
+})
 const engine = new Liquid()
 const md = new markdownIt({
   html: true,

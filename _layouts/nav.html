@@ -4,6 +4,10 @@ categories:
     title: 엑셀 함수식
   - id: msoffice-template
     title: MS오피스 템플릿
+    order: desc
+  - id: dev
+    title: 개발 노트
+    order: desc
 ---
 
 <nav>
@@ -18,11 +22,19 @@ categories:
   {% for cat in categories %}
     <ul id="{{ cat.id }}" class="mt-[-3.5rem] pt-[6.5rem] mb-[1rem]">
       <div class="font-size-[1.75rem]">{{ cat.title }}</div>
-      {% for page in pages %}
-        {% if page.pathname contains cat.id%}
-          <li><a href="{{ page.pathname }}">{{ page.title }}</a></li>
-        {% endif %}
-      {% endfor %}
+      {% if cat.order == "desc" %}
+        {% for page in pages reversed %}
+          {% if page.pathname contains cat.id%}
+            <li><a href="{{ page.pathname }}">{{ page.title }}</a> <span class="color-[var(--fg-b)]"></span></li>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% for page in pages %}
+          {% if page.pathname contains cat.id%}
+            <li><a href="{{ page.pathname }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
     </ul>
   {% endfor %}
 </nav>
