@@ -1,13 +1,14 @@
 ---
-layout: post
-title: "Python 에서 특정한 조건일 때, List Comprehension 순회 중간에 break 하기"
+layout: page
+title: "Python 에서 List Comprehension 순회 중간에 break 하기"
+description: List comprehension 문법으로 순회 도중, 특정한 조건일 때 순회 break 를 거는 방법 소개
 updated: 2021-09-07
-tags: [coding]
+tags: code-snippet
 ---
 
 ## Comprehension 표현식과 break
  
-Comprehension 표현식은, 어떤 Iterable 개체를 처음부터 끝까지 순회하면서 이런저런 처리를 손쉽게 할 수 있도록 해주는 Python 의 강력한 기능이다.
+Comprehension 표현식은, 어떤 iterable 개체를 처음부터 끝까지 순회하면서 이런저런 처리를 손쉽게 할 수 있도록 해주는 Python 의 강력한 기능이다.
 
 어떤 특정한 상황에서는 순회 중간에 끊어버리고 싶을 때가 있는데, for 나 while 반복문에서 사용하는 break 를 사용하면 에러가 발생한다. break 는 Comprehension 표현식이 요구하는 Expression 이 아닌 Statement 이기 때문이다.
 
@@ -17,7 +18,6 @@ arr = [1, 2, 3, 4, 5, 4, 3, 2, 1]
 print([x for x in arr if x < 4])             # [1, 2, 3, 3, 2, 1]
 print([x for x in arr if x < 4 or break])    # 에러 발생
 ```
-{:.python}
 
 `x < 4` 가 더 이상 True 가 아닐 때 바로 순회를 종료해버리고 싶다면, itertools 모듈의 takeWhile 함수를 사용하면 된다.
 
@@ -28,7 +28,6 @@ arr = [1, 2, 3, 4, 5, 4, 3, 2, 1]
 
 print(list(takewhile(lambda x: x < 4, arr)))    # [1, 2, 3]
 ```
-{:.python}
 
 ## Comprehension 순회 중간에 순회 대상의 모든 요소를 없애기
 
@@ -41,7 +40,6 @@ print([x for x in arr if x < 4 or arr.clear()])    # [1, 2, 3]
 
 print(arr)    # [] <-- 순회하던 리스트가 빈 리스트가 됨
 ```
-{:.python}
 
 `x < 4` 가 더 이상 True 가 아닐 때, `arr.clear()` 구문이 실행된다. 함수호출은 Expression 이기 때문에 사용할 수가 있고, clear 함수는 리스트 모든 요소를 없애버린다. 없어졌기 때문에 더 이상 순회를 못하는 점을 이용한 것이다.
 
@@ -53,13 +51,12 @@ print(arr)    # [] <-- 순회하던 리스트가 빈 리스트가 됨
 
 ```python
 arr = [1, 2, 3, 4, 5, 4, 3, 2, 1]
-g = (x for x in arr)    # Comprehension 표현식을 괄호로 감싸면 Generator 를 리턴한다.
+g = (x for x in arr)    # 괄호로 Comprehension 표현식을 감싸면 Generator 를 리턴한다.
 
 print([x for x in g if x < 4 or g.close()])    # [1, 2, 3]
 
 print(arr)    # [1, 2, 3, 4, 5, 4, 3, 2, 1]
 ```
-{:.python}
 
 arr 리스트를 제너레이터로 감싼 뒤, g 에 대입하였다. (물론 직접 def 구문으로 제너레이터를 생성해도 된다.)
 
