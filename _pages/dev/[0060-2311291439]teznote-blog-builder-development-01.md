@@ -13,8 +13,8 @@ tags: dev
 어떤 방식으로 빌드가 되도록 할까 하다가 아래와 같이 정했다.
 
 > - Historical SPA 방식으로 작동 (메뉴 또는 포스팅을 클릭거나 주소를 입력하면 Json 형식의 콘텐츠를 불러오도록 함)
-> - 포스팅은 마크다운으로 작성하되, Github 에 올리면 자동으로 빌드(마크다운 -> html -> Json 으로 저장) 되도록 함
-> - 마크다운 파일을 `[ver]pathname.md` 형태로 저장하고, `ver` 가 변경되었을 경우만 빌드, `ver` 에 따라 포스팅 정렬, `pathname` 은 포스팅 주소가 되도록 함
+> - 포스팅은 마크다운으로 작성하되, Github 에 올리면 자동으로 빌드(마크다운 -> Html -> Json 으로 저장) 되도록 함
+> - 마크다운 파일을 `[ver]pathname.md` 형태로 저장하고, `ver` 가 변경된 파일만 빌드, `ver` 에 따라 포스팅 정렬, `pathname` 은 포스팅 주소가 되도록 함
 
 약 한달간을 삽질한 끝에 적당히(?) 빌더를 만들 수 있었다. `build.js` 파일에 필요한 기능을 몽땅 때려박고, `/docs` 폴더에 빌드 결과물 (Html, Json 파일 등) 을 저장되도록 했다.
 
@@ -32,19 +32,19 @@ Jekyll 경험 때문인지, LiquidJS 를 사용했으며, 프론트매터 파싱
 
 ```pseudo
 Project Root
-│
-├ _assets
-│ └ main.css
-│
-├ _layouts
-│ └ base.html
-│  nav.html
-│ page.html
-│
-├ _pages
-│
-└ build.js
-  uno.config.ts
+  │
+  ├ _assets
+  │   └ main.css
+  │
+  ├ _layouts
+  │   └ base.html
+  │     nav.html
+  │     page.html
+  │
+  ├ _pages
+  │
+  └ build.js
+    uno.config.ts
 ```
 
 `_assets` 폴더에는 UnoCSS 에 의해 빌드되는 `main.css` 파일과, 그 외 특별한 수정없이 Deploy 되어야 할 static 파일들 (예를들면 `favicon.svg`) 이 위치해야 하고,
