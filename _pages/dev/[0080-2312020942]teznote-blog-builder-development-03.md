@@ -36,7 +36,7 @@ hljs.registerLanguage("pseudo", function(hljs) {
       },
       {
         className: 'leadline',
-        begin: /[─│┌┐┘└├┬┤┴┼▲▶▼◀]+/,
+        begin: /[─│┌┐┘└├┬┤┴┼▲▶▼◀↑→↓←]+/,
       },
     ],
   }
