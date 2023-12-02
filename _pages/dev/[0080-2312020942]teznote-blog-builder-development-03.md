@@ -61,9 +61,9 @@ blah...
 ```pseudo
 # linked list 구조
 
-head ─────▶ NODE       ┌───▶ NODE
+head ─────→ NODE       ┌───→ NODE
             ├ val: 1   │     ├ val: 2
-            └ next ────┘     └ next ─────▶ null
+            └ next ────┘     └ next ─────→ null
 ```
 
 ## 라인별 하이라이팅 기능 생성

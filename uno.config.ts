@@ -35,8 +35,10 @@ export default defineConfig({
     fontFamily: {
       // sans: 'NanumSquareRound, sans-serif',
       // mono: 'Hack, NanumSquareRound, monospace',
-      sans: 'D2Coding, monospace',
-      mono: 'D2Coding, monospace',
+      // sans: 'D2Coding, monospace',
+      // mono: 'D2Coding, monospace',
+      sans: 'monoplex, monospace',
+      mono: 'monoplex, monospace',
     },
   },
   presets: [
