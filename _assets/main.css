@@ -31,7 +31,7 @@
     }
   }
   &.dark .line {
-    &.\: {
+    &.\> {
       background: var(--tw-color-indigo-950);
     }
     &.\+ {
