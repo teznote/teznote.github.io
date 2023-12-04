@@ -117,7 +117,7 @@ const md = new markdownIt({
 ```python
 # leetcode 1 번 문제 python brute force 풀이
 
-:def twoSum(self, nums: List[int], target: int) -> List[int]:
+>def twoSum(self, nums: List[int], target: int) -> List[int]:
 -  for i, x in enumerate(nums):
 +  for i, x in enumerate(nums[:-1]):
 -    for j, y in enumerate(nums):

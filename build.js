@@ -49,7 +49,7 @@ const md = new markdownIt({
     let tar_line = new Map()
     for (let [i, x] of lines_o.entries()) {
       let prefix = x[0]
-      if (prefix === '+' || prefix === '-' || prefix === ':') {
+      if (prefix === '+' || prefix === '-' || prefix === '>') {
         tar_line.set(i, prefix)
         x = x.slice(1)
       }
