@@ -6,5 +6,7 @@ MS-Office:
 Development:
 - id: dev
   title: 개발 노트
+  order: desc
 - id: code-snippet
   title: 코드 조각
+  order: desc
