@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "Python Lambda 함수식 안에서 Statement 사용하기"
 description: 한줄로 표현할 수 있는 Lambda 함수식에 Statement 를 적용하여 활용 폭을 넓혀보는 방법
 updated: 2021-09-07
-tags: code-snippet
 ---
 
 ## Expression 만 허용하는 Lambda 함수식

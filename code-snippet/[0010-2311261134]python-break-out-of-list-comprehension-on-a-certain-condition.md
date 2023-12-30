@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "Python 에서 List Comprehension 순회 중간에 break 하기"
 description: List comprehension 문법으로 순회 도중, 특정한 조건일 때 순회 break 를 거는 방법 소개
 updated: 2021-09-07
-tags: code-snippet
 ---
 
 ## Comprehension 표현식과 break

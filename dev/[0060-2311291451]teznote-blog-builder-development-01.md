@@ -1,9 +1,7 @@
 ---
-layout: page
 title: Tez'Note 블로그 빌더 개발노트 01 - 콘셉트와 프로젝트 구조
 description: Tez'Note 블로그 콘셉트와 빌더 프로젝트 구조
 updated: 2023-11-29
-tags: dev
 ---
 
 ## 빌더 콘셉트

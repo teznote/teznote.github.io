@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "INDEX,MATCH,SMALL: 데이터를 정렬하여 재나열하는 함수식"
 description: 세로로 나열되어있는 데이터를 읽어서 오름차순(또는 내림차순)으로 정렬하여 재나열하는 함수식
 updated: 2021-08-16
-tags: excel-formula
 ---
 
 ## 함수식으로 데이터 정렬

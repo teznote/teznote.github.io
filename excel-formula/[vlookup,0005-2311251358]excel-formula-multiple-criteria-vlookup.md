@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "VLOOKUP: 두가지 이상 검색기준으로 VLOOKUP 검색 방법"
 description: 두가지 이상 조건들을 모두 만족시키는 VLOOKUP 검색식
 updated: 2021-08-04
-tags: excel-formula
 ---
 
 ## 두가지 이상 기준 VLOOKUP 검색

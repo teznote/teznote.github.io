@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "Apps Script 로 구글 캘린더를 다른 캘린더로 자동 복사"
 description: 구글 Apps Script 활용하여 구글 캘린더 일정을 자동으로 복사
 updated: 2023-06-13
-tags: dev
 ---
 
 ## 구글 캘린더를 다른 캘린더로 복사

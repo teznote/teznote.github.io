@@ -1,9 +1,7 @@
 ---
-layout: page
 title: Tez'Note 블로그 빌더 개발노트 02 - 폴더, 파일들 초기 셋업
 description: 본격 코딩 전 각종 모듈 import 및 주요 config 파일들 셋업
 updated: 2023-11-30
-tags: dev
 ---
 
 ## Github 레포지토리 클론

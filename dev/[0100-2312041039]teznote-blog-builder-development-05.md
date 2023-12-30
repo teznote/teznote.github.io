@@ -1,9 +1,7 @@
 ---
-layout: page
 title: Tez'Note 블로그 빌더 개발노트 05 - 빌드 스크립트 작성
 description: 블로그 빌드의 가장 핵심적인 부분인 markdown -> html -> json 으로 변환하는 과정 
 updated: 2023-12-04
-tags: dev
 ---
 
 ## 마크다운 형식

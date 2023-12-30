@@ -1,9 +1,7 @@
 ---
-layout: page
 title: Tez'Note 블로그 빌더 개발노트 04 - 웹페이지 레이아웃 설정과 SPA, dark 테마 스크립트
 description: 웹페이지로 구현될 레이아웃 템플릿 작성 및 SPA, dark 테마 사용 위한 스크립트 구문 설정 
 updated: 2023-12-02
-tags: dev
 ---
 
 ## 레이아웃 템플릿

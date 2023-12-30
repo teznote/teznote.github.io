@@ -1,9 +1,7 @@
 ---
-layout: page
 title: Tez'Note 블로그 빌더 개발노트 03 - markdown-it, highlight.js 커스터마이징
 description: 코드 하이라이터에 의사코드 하이라이팅, 라인별 하이라이팅 기능 추가 커스터마이징
 updated: 2023-12-02
-tags: dev
 ---
 
 ## 커스터마이징

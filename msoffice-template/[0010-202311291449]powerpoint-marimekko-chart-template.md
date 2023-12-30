@@ -1,8 +1,6 @@
 ---
-layout: page
 title: "PowerPoint: 마리메꼬 (Marimekko) 차트 템플릿"
 updated: 2021-08-16
-tags: msoffice-template
 ---
 
 ## 마리메꼬 차트

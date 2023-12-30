@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "VLOOKUP: 유사일치 방식으로 VLOOKUP 속도 높이기"
 description: 유사일치 방식으로 VLOOKUP 정확한일치검색과 동일한 결과를 보이면서 속도를 비약적으로 향상시킬 수 있는 함수식
 updated: 2023-05-08
-tags: excel-formula
 ---
 
 ## VLOOKUP 정확한일치검색 단점

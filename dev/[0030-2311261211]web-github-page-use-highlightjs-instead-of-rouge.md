@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "깃허브 페이지 하이라이터, Highlight.js 사용하고, 약간의 커스터마이징"
 description: Jekyll 의 기본 하이라이터인 Rouge 대신 Highlight.js 사용 및 커스터마이징
 updated: 2023-11-25
-tags: dev
 ---
 
 ## 2023-11-25 Update

@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "INDEX,MATCH: VLOOKUP 대신 사용할 수 있는 보다 유용한 검색식"
 description: VLOOKUP 보다 더 유연한 검색과 결과를 보이는 INDEX, MATCH 함수식
 updated: 2023-10-03
-tags: excel-formula
 ---
 
 ## VLOOKUP 함수 단점

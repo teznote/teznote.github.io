@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "CELL: Sheet 이름을 동적으로 불러오는 함수식"
 description: 특정 셀이 위치한 Sheet 이름을 불러오는 함수식
 updated: 2021-08-05
-tags: excel-formula
 ---
 
 ## Sheet 이름 동적 연결

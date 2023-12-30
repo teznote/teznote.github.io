@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "INDEX,ROWS: 열에 있는 데이터들을 역순으로 재나열하는 함수식"
 description: 세로로 나열되어 있는 데이터를 읽어서 역순으로 다시 재나열하는 함수식
 updated: 2021-08-18
-tags: excel-formula
 ---
 
 ## 데이터 순서 역순으로 재나열

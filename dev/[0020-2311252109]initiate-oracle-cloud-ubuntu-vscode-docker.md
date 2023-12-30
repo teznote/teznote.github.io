@@ -1,9 +1,7 @@
 ---
-layout: page
 title: "오라클 클라우드, 우분투, VSCode, 도커 설치 및 세팅"
 description: 오라클에서 제공하는 무료 가상머신으로 개발을 위한 초기 세팅 방법
 updated: 2022-03-13
-tags: dev
 ---
 
 ## 이 포스팅은...
