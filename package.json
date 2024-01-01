@@ -1,8 +1,8 @@
 {
   "name": "teznote-builder",
   "version": "1.1.0",
-  "description": "my blog building program",
-  "main": "index.js",
+  "description": "builder for teznote blog",
+  "main": "build.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,7 +23,6 @@
     "markdown-it": "^14.0.0",
     "postcss": "^8.4.32",
     "postcss-nested": "^6.0.1",
-    "terser": "^5.26.0",
     "unocss": "^0.58.0"
   }
 }
