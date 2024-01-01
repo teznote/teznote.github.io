@@ -10,16 +10,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout pages in main
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          path: './_pages'
       - name: checkout build library in gh-pages
         uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: '.'
+      - name: checkout pages in main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: './_pages'
       - run: ls -al
       - uses: actions/setup-node@v4
         with:
