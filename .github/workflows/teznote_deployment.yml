@@ -15,12 +15,12 @@ jobs:
         with:
           ref: main
           path: './_pages'
-      - run: ls -al
       - name: checkout build library in gh-pages
         uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: '.'
+      - run: ls -al
       - uses: actions/setup-node@v4
         with:
           node-version: 18
