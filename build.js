@@ -103,7 +103,8 @@ for (let src of mdsrcs) {
 
 
 // render navigation pages
-const navmenu = yaml.load(fs.readFileSync(fg.globSync($root + '/_pages/**/*.{yaml,yml}')[0], 'utf8'))
+const yamlfile = fg.globSync($root + '/_pages/**/*.{yaml,yml}')[0]
+const navmenu = yaml.load(fs.readFileSync(yamlfile, 'utf8'))
 for (let [sup, sub] of Object.entries(navmenu)) {
   const { content } = render($root + '/_layouts/nav.html', '', { cats: sub, pages: pageinfos })
   const pathname = '/' + sup.toLocaleLowerCase()
