@@ -76,7 +76,7 @@ site:
         try {
           response = await (await fetch(tar_pathname)).json()
         } catch (err) {
-          response = await (await fetch('/404.json')).json()
+          response = await (await fetch('/_pages/404.json')).json()
         }
         $main.innerHTML = response.content
         document.title = response.title + `::{{ site.title }}`
