@@ -1,6 +1,6 @@
 ---
 title: Tez'Note 블로그
-description: 나중에 다시 찾아보기 위해 이것저것 기록해 놓은 노트와 같은 개인 블로그
+description: 나중에 재활용할 수 있도록 이런저런 것들을 기록해놓기 위한 노트와 같은 개인 블로그
 updated: 2023-11-24
 ---
 
@@ -14,9 +14,9 @@ updated: 2023-11-24
 
 그러다가 오직 유일한 나만의 블로그를 가지고 싶어서 티스토리 스킨을 자체 제작 해보고, 워드프레스까지도 손 대보다가, 현재 깃허브 페이지에 정착을 했다.
 
-본래 [Jekyll](http://jekyllrb-ko.github.io/) 을 사용하여 단순한 테마도 직접 만들어보고는 했었는데, 어느날 갑자기 Jekyll 과 같은 정적 사이트 제너레이터 (Static Site Generator, SSG) 까지 직접 구축해보고싶다는 생각을 하게 되었다.
+본래 [Jekyll](http://jekyllrb-ko.github.io/) 이라는 Static Site Generator (SSG) 를 사용하여 단순한 테마도 직접 만들어보고는 했었는데, 어느날 갑자기 SSG 를 직접 만들어보고 싶다는 생각도 하게 되었다.
 
-[Node.JS](https://nodejs.org/en) 와 수많은 3rd party 모듈과 얄팍한 지식으로, 약 한달간 끙끙댄 끝에 간신히 어설프게나마 나만의 SSG 를 만들 수 있었다. 본 블로그는 이렇게 만들어졌다. 물론 운영하면서 조금씩 개선해갈 생각이다.
+[Node.JS](https://nodejs.org/en) 및 수많은 3rd party 모듈과 얄팍한 지식으로, 약 한달간 끙끙댄 끝에 간신히 어설프게나마 나만의 SSG 를 만들 수 있었다. 본 블로그는 이렇게 만들어졌다. 물론 운영하면서 조금씩 개선해갈 생각이다.
 
 ## 블로그 콘텐츠
 
@@ -28,9 +28,8 @@ updated: 2023-11-24
 
 언제까지 열심히 몰입하면서 운영할지는 모르겠다. 일단은 시작을 해본다.
 
+- hello-blog.py
 ```python
-# python
-
 def greet():
   print('Hello blog! 👏👏👏')
 ```

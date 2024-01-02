@@ -1,4 +1,5 @@
 {
   "editor.fontFamily": "D2Coding, monospace",
-  "editor.fontSize": 14
+  "editor.fontSize": 14,
+  "editor.unicodeHighlight.nonBasicASCII": false
 }
