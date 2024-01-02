@@ -1,7 +1,9 @@
 name: Tez'Note Deployment
 on:
   push:
-    branches: [ 'main', 'gh-pages' ]
+    branches:
+      - main
+      - gh-pages
 permissions:
   contents: write
   pages: write
