@@ -1,0 +1,9 @@
+{
+	"insert region": {
+		"prefix": "#",
+		"body": [
+			"<!--#region-->$1<!--#endregion-->"
+		],
+		"description": "to insert long long code like base64"
+	}
+}
