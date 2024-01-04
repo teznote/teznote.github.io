@@ -63,7 +63,7 @@ body, div, header, main, footer, section {
   }
 }
 body {
-  @apply font-mono font-400 text-base line-height-[1.2];
+  @apply font-mono font-400 text-base line-height-[1.5];
 }
 pre, code, kbd, samp, cite {
   @apply font-mono;
@@ -87,19 +87,22 @@ article {
       @apply font-size-[1.5rem] mt-[2rem] mb-[1rem] before:content-['📌_'];
     }
     >div, >blockquote, >p, >pre, >ul {
-      @apply my-[1rem];
+      @apply my-[1.5rem];
     }
     >blockquote {
-      @apply bg-[var(--bg-2)] px-[0.5rem] py-[0.5rem] rounded-b-[0.5rem];
+      @apply bg-[var(--bg-2)] px-[1rem] py-[0.5rem] rounded-b-[0.25rem];
     }
     >pre {
-      @apply bg-[var(--bg-2)] px-[0.5rem] pt-[0.5rem] rounded-b-[0.5rem];
+      @apply bg-[var(--bg-2)] px-[1rem] pt-[0.5rem] rounded-b-[0.25rem];
       &>code {
         @apply pb-[0.5rem] block;
       }
     }
     >ul {
-      @apply bg-[var(--bg-2)] px-[0.5rem] py-[0.5rem] border-b-solid border-b-[var(--fg-1)] border-b-1 mb-[-1rem] rounded-t-[0.5rem];
+      @apply block mb-[-1.5rem];
+      >li {
+        @apply inline-block bg-[var(--bg-2)] px-[1rem] py-[0.5rem] border-b-solid border-b-[var(--fg-2)] border-b-1 rounded-t-[0.25rem];;
+      }
     }
   }
 }
