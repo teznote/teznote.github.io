@@ -49,9 +49,11 @@
   }
 }
 :root {
-  --fg-1: #343a40; --fg-a: #fd7e14; --bg-1: #f8f9fa; --bg-2: #f1f3f5; --box-shadow: rgba(53, 59, 65, 0.05) 0px 2.8px 2.2px 0px, rgba(53, 59, 65, 0.03) 0px 6.7px 5.3px 0px, rgba(53, 59, 65, 0.04) 0px 12.5px 10px 0px, rgba(53, 59, 65, 0.04) 0px 22.3px 17.9px 0px, rgba(53, 59, 65, 0.05) 0px 41.8px 33.4px 0px, rgba(53, 59, 65, 0.02) 0px 100px 80px 0px;
+  --fg-1: var(--color-gray-900); --fg-2: var(--color-gray-500); --fg-a: var(--color-orange-600);
+  --bg-1: var(--color-gray-100); --bg-2: var(--color-gray-200);
   &[data-theme="dark"] {
-    --fg-1: #dee2e6; --fg-a: #ffa94d; --bg-1: #343a40; --bg-2: #495057; --box-shadow: rgba(34, 38, 42, 0.23) 0px 2.8px 2.2px 0px, rgba(34, 38, 42, 0.21) 0px 6.7px 5.3px 0px, rgba(34, 38, 42, 0.22) 0px 12.5px 10px 0px, rgba(34, 38, 42, 0.22) 0px 22.3px 17.9px 0px, rgba(34, 38, 42, 0.23) 0px 41.8px 33.4px 0px, rgba(34, 38, 42, 0.2) 0px 100px 80px 0px;
+    --fg-1: var(--color-gray-100); --fg-2: var(--color-gray-400); --fg-a: var(--color-orange-400);
+    --bg-1: var(--color-gray-800); --bg-2: var(--color-gray-700);
   }
 }
 body, div, header, main, footer, section {
@@ -67,7 +69,7 @@ pre, code, kbd, samp, cite {
   @apply font-mono;
 }
 a, a:link, a:visited, a:hover, a:active {
-  text-decoration: none; color: var(--fg-a);
+  text-decoration: underline; color: var(--fg-a);
 }
 
 article {

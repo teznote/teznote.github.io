@@ -33,8 +33,8 @@ export default defineConfig({
     //   // ...
     // },
     fontFamily: {
-      sans: 'NeoDunggeunmo,monospace',//'-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
-      mono: 'NeoDunggeunmo,monospace',//'ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace',
+      sans: 'Hack,NanumSquareNeo,NeoDunggeunmo,monospace',//'-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
+      mono: 'NanumSquareNeo,NeoDunggeunmo,monospace',//'ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace',
     },
   },
   presets: [
