@@ -87,15 +87,26 @@ article {
       @apply font-size-[1.5rem] mt-[3rem] mb-[1.5rem] before:content-['📌_'];
     }
     >div, >blockquote, >p, >pre, >ul {
-      @apply my-[1.5rem];
+      @apply w-full my-[1.5rem];
+    }
+    >div, >blockquote, >p, >ul {
+      >code {
+        @apply bg-[var(--bg-2)] rounded-[0.25rem];
+      }
     }
     >blockquote {
       @apply bg-[var(--bg-2)] px-[1rem] py-[0.5rem] rounded-[0.25rem];
+      ul li {
+        @apply ml-[1rem];
+        &:before {
+          @apply content-['-'] w-[1rem] ml-[-1rem] inline-block text-left;
+        }
+      }
     }
     >pre {
-      @apply bg-[var(--bg-2)] px-[1rem] pt-[0.5rem] rounded-[0.25rem];
-      &>code {
-        @apply pb-[0.5rem] block;
+      @apply bg-[var(--bg-2)] px-[1rem] pt-[0.5rem] rounded-[0.25rem] overflow-x-auto;
+      >code {
+        @apply w-full min-w-[-moz-fit-content] min-w-[fit-content] pb-[0.5rem] block;
       }
     }
     >ul {
@@ -103,6 +114,15 @@ article {
       >li {
         @apply block bg-[var(--bg-2)] max-w-full overflow-hidden w-fit px-[1rem] py-[0.25rem] whitespace-nowrap text-ellipsis border-b-solid border-b-[var(--fg-2)] border-b-1 rounded-t-[0.25rem];
       }
+    }
+    img {
+      @apply max-w-full mx-auto block align-bottom;
+      &+em {
+        @apply block font-size-[0.9rem] text-center color-[var(--fg-b)];
+      }
+    }
+    b, strong {
+      @apply underline;
     }
   }
 }
