@@ -16,6 +16,7 @@
       {% else %}
         {% assign pages_ = pages %}
       {% endif %}
+      <div id="{{ cat.id }}">{{ cat.title }}</div>
       <ul>
         {% for page in pages_ %}
           {% if page.cat contains cat.id %}

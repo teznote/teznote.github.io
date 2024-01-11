@@ -14,19 +14,19 @@ site:
     <link rel="stylesheet" href="/_assets/main.css" />
   </head>
   <body class="fixed top-0 right-0 bottom-0 left-0 flex flex-col bg-[var(--bg-1)] color-[var(--fg-1)]">
-    <section class="flex-[0_0_3rem] min-h-0 w-full overflow-hidden bg-[var(--bg-2)]">
-      <div class="h-full w-full max-w-[60rem] mx-auto px-[0.5rem]">
-        <header class="h-full w-full flex items-center justify-left gap-x-[1.25rem] flex-wrap">
+    <section class="flex-[0_0_48px] min-h-0 w-full overflow-hidden bg-[var(--bg-2)]">
+      <div class="h-full w-full max-w-[960px] mx-auto px-[8px]">
+        <header class="h-full w-full flex items-center justify-left gap-x-[20px] flex-wrap">
             <div><span id="site-title">{{ site.title }}</span>::</div>
             <div><a href="/">Home</a></div>
               {% for menu in menus %}
                 <div><a href="{{ menu.pathname }}">{{ menu.title }}</a></div>
               {% endfor %}
-            <label id="switch-theme" class="relative h-[1.5rem] w-[1.5rem] ml-auto overflow-hidden cursor-pointer">
-              <input type="checkbox" class="h-0 w-0 opacity-0 [&:checked+div]-top-[-1.5rem]" />
-              <div class="absolute top-0 left-0 h-[1.5rem] w-[1.5rem] transition-top-400">
-                <div class="h-[1.5rem] w-[1.5rem] flex items-center justify-center font-size-[1.25rem]">🌞</div>
-                <div class="h-[1.5rem] w-[1.5rem] flex items-center justify-center font-size-[1.25rem]">🌚</div>
+            <label id="switch-theme" class="relative h-[24px] w-[24px] ml-auto overflow-hidden cursor-pointer">
+              <input type="checkbox" class="h-0 w-0 opacity-0 [&:checked+div]-top-[-24px]" />
+              <div class="absolute top-0 left-0 h-[24px] w-[24px] transition-top-400">
+                <div class="h-[24px] w-[24px] flex items-center justify-center font-size-[20px]">🌞</div>
+                <div class="h-[24px] w-[24px] flex items-center justify-center font-size-[20px]">🌚</div>
               </div>
             </label>
           </div>
@@ -34,12 +34,12 @@ site:
       </div>
     </section>
     <section id="scroller" class="flex-[1_0_0] min-h-0 w-full overflow-y-scroll">
-      <div class="max-w-[60rem] w-full mx-auto px-[0.5rem]">
+      <div class="max-w-[960px] w-full mx-auto px-[8px]">
         <main class="w-full"><!-- fetched page goes here --></main>
       </div>
       <div class="sticky top-[100vh] bg-[var(--bg-2)]">
-        <div class="h-[3rem] max-w-[60rem] w-full mx-auto px-[0.5rem]">
-          <footer class="h-full w-full flex items-center justify-center flex-wrap gap-x-[0.5rem]">
+        <div class="h-[48px] max-w-[960px] w-full mx-auto px-[8px]">
+          <footer class="h-full w-full flex items-center justify-center flex-wrap gap-x-[8px]">
             <div>This blog is designed by Tez,</div>
             <div>and Deployed on Github Pages.</div>
           </footer>
