@@ -49,10 +49,10 @@
   }
 }
 :root {
-  --fg-1: var(--color-neutral-900); --fg-2: var(--color-neutral-500); --fg-a: var(--color-blue-600);
+  --fg-1: var(--color-neutral-900); --fg-2: var(--color-neutral-400); --fg-a: var(--color-blue-600);
   --bg-1: var(--color-neutral-100); --bg-2: var(--color-neutral-200);
   &[data-theme="dark"] {
-    --fg-1: var(--color-neutral-100); --fg-2: var(--color-neutral-400); --fg-a: var(--color-blue-400);
+    --fg-1: var(--color-neutral-100); --fg-2: var(--color-neutral-500); --fg-a: var(--color-blue-400);
     --bg-1: var(--color-neutral-800); --bg-2: var(--color-neutral-700);
   }
 }
@@ -112,7 +112,7 @@ article {
     >ul {
       @apply block mb-[-1.5rem];
       >li {
-        @apply block bg-[var(--bg-2)] max-w-full overflow-hidden w-fit px-[1rem] py-[0.25rem] whitespace-nowrap text-ellipsis border-b-solid border-b-[var(--fg-2)] border-b-1 rounded-t-[0.25rem];
+        @apply block bg-[var(--bg-2)] max-w-full overflow-hidden w-fit px-[1rem] py-[0.25rem] whitespace-nowrap text-ellipsis border-b-solid border-b-[var(--fg-2)] border-b-1 rounded-t-[0.25rem] before:content-['🏷️_'];
       }
     }
     img {
@@ -123,6 +123,17 @@ article {
     }
     b, strong {
       @apply underline;
+    }
+  }
+}
+
+nav {
+  #categories {
+    ul {
+      @apply my-[3rem] flex gap-[1rem] flex-wrap;
+      li a {
+        @apply no-underline color-[var(--fg-1)] p-[0.5rem] border border-solid rounded-tl-[0.5rem] rounded-br-[0.5rem]
+      }
     }
   }
 }
